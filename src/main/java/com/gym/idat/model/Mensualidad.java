@@ -16,7 +16,7 @@ import java.time.LocalDate;
 public class Mensualidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private LocalDate fechaInicio;
     private LocalDate fechaFinal;
