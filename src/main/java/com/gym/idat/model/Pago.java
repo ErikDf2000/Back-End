@@ -1,17 +1,14 @@
 package com.gym.idat.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
+import lombok.Data;
 import javax.persistence.*;
-import java.time.LocalDate;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collection;
+
+@Data
 @Entity
 public class Pago {
     @Id
@@ -26,9 +23,10 @@ public class Pago {
 
     @ManyToOne
     private Mensualidad mensualidad;
-
-    @ManyToOne
-    private Planpago planpago;
+    
+    @OneToMany//referencia FK a nivel de entidades
+	private Collection<Planpago> pagos=new ArrayList<>();
+	
 
 //    @PrePersist
 //    void Prepersit() {

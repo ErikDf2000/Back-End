@@ -4,6 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Data
 @Entity
@@ -19,6 +21,14 @@ public class Planpago {
 	
 	private LocalDate inicio;
 	private LocalDate finn ;
-
 	
+	@OneToMany//referencia FK a nivel de entidades
+	private Collection<Cliente> pagos=new ArrayList<>();
+	/*
+	@OneToOne
+	private Cliente cliente;
+	*/
+	/*@ManyToOne
+	private Pago pago;
+*/	
 }

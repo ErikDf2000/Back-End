@@ -49,7 +49,7 @@ public class ClienteService {
 	    }
 
 	    public Cliente updateCliente(Cliente cliente) {
-	    	Cliente existingCliente = repository.findById(cliente.getIdcliente()).orElse(null);
+	    	Cliente existingCliente = repository.findById(cliente.getId()).orElse(null);
 	        existingCliente.setNombre(cliente.getNombre());
 	        existingCliente.setApellido(cliente.getApellido());
 	        existingCliente.setSexo(cliente.getSexo());

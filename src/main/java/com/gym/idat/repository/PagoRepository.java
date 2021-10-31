@@ -11,8 +11,8 @@ import java.util.List;
 
 @Repository
 public interface PagoRepository extends JpaRepository<Pago, Integer> {
-    List<Pago> findByPlan_id(Integer id);
+   // List<Pago> findByPlan_id(int id);
 
 
-    List<Pago> findByEstadoAndplanPlanIdAndMensualidad_FechaFinalBefore(Boolean estado , Integer id , LocalDate mes);
+    //List<Pago> findByEstadoAndplanIdAndMensualidad_FechaFinalBefore(Boolean estado , int id , LocalDate mes);
 }

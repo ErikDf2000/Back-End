@@ -24,5 +24,10 @@ public class ClaseController {
     public String agregar(@RequestBody Clase clase){
         return service.save(clase);
     }
+    
+    @DeleteMapping("/{id}")
+    public String deleteClase(@PathVariable int id) {
+        return service.deleteClase(id);
+    }
 
 }

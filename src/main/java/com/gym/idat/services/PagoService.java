@@ -20,7 +20,7 @@ public class PagoService {
         return repository.findAll();
     }
 
-    public Boolean getById(Integer id){
+    public Boolean getById(int id){
         return repository.existsById(id);
     }
 
@@ -29,20 +29,19 @@ public class PagoService {
         return "Pago Creado.";
     }
 
-    public String update(Pago pago, Integer id){
+    public String update(Pago pago, int id){
         Pago pagoUpd = repository.getById(id);
 
         pagoUpd.setFechaPago(pago.getFechaPago());
         pagoUpd.setDescripcion(pago.getDescripcion());
         pagoUpd.setEstado(pago.getEstado());
         pagoUpd.setMensualidad(pago.getMensualidad());
-        pagoUpd.setPlanpago(pago.getPlanpago());
 
         repository.save(pagoUpd);
         return "Pago Actualizado.";
     }
 
-    public String pagar(Pago pago, Integer id){
+    public String pagar(Pago pago, int id){
         LocalDate date = LocalDate.now();
         Pago pagar = repository.getById(id);
 
@@ -53,13 +52,13 @@ public class PagoService {
         return "Pago Realizado del mes de "+pagar.getMensualidad().getMes();
     }
 
-    public List<Pago> getPagosByIdAlumno(Integer id){
+    /*public List<Pago> getPagosByIdAlumno(int id){
         return repository.findByPlan_id(id);
-    }
+    }*/
 
-    public List<Pago> custom(Integer  id , LocalDate mes ){
-        return repository.findByEstadoAndplanPlanIdAndMensualidad_FechaFinalBefore( false , id , mes  );
-    }
+    /*public List<Pago> custom(int  id , LocalDate mes ){
+        return repository.findByEstadoAndplanIdAndMensualidad_FechaFinalBefore( false , id , mes  );
+    }*/
 
 
 

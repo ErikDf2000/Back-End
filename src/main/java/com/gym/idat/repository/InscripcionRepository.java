@@ -10,5 +10,5 @@ import com.gym.idat.model.Inscripcion;
 public interface InscripcionRepository extends JpaRepository<Inscripcion, Integer>{
 
 	//TABLA CLIENTE
-	Cliente findByNombre(String nombre);
+	//Cliente findByNombre(String nombre);
 }

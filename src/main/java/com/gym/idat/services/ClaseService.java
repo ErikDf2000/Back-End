@@ -21,5 +21,9 @@ public class ClaseService {
         repository.save(clase);
         return "Registro Exitoso";
     }
+    public String deleteClase(int id) {
+        repository.deleteById(id);
+        return "Clase removida!! " + id;
+    }
 
 }

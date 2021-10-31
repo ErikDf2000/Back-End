@@ -18,6 +18,9 @@ public class Inscripcion {
 	
 	private int idcliente;
 	
+	@ManyToOne
+	private Planpago planpago;
+	
 	private int id;
 	 
 	

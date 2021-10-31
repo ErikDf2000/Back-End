@@ -20,7 +20,7 @@ public class Cliente  {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idcliente;
+	private int id;
 	
 	private String nombre;
 	
