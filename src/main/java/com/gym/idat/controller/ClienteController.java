@@ -24,7 +24,7 @@ public class ClienteController {
 	    private ClienteService service;
 
 	    @PostMapping("/registrar")
-	    public Cliente addCliente(@RequestBody Cliente cliente) {
+	    public Cliente agregar(@RequestBody Cliente cliente) {
 	        return service.save(cliente);
 	    }
 
