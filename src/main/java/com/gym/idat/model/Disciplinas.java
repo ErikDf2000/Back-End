@@ -17,13 +17,7 @@ public class Disciplinas  {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nombre;
-	private String modalidad;
 	
-	@DateTimeFormat(pattern="yyyy-MM-dd",iso=ISO.DATE)
-	private LocalDate empieza;
-	/*@DateTimeFormat(pattern="yyyy-MM-dd",iso=ISO.DATE)
-	private LocalDate acaba;
-	*/
-	private int idtrainer;
+
 
 }

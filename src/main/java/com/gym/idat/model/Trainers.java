@@ -27,6 +27,7 @@ public class Trainers{
 	private LocalDate fechaNac;
 	private int telefono;
 	private String descripcion;
+	
 
 
 
