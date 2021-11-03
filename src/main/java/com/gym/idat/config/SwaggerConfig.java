@@ -29,7 +29,7 @@ public class SwaggerConfig {
 
     private ApiInfo info(){
         return new ApiInfo(
-                "API MATRICULA",
+                "API GYM",
                 "",
                 "1.0",
                 "https://www.apache.org/licenses/LICENSE-2.0.html",
