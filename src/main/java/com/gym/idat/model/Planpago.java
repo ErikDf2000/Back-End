@@ -23,7 +23,7 @@ public class Planpago {
 	private LocalDate finn ;
 	
 	@OneToMany//referencia FK a nivel de entidades
-	private Collection<Cliente> pagos=new ArrayList<>();
+	private Collection<Cliente> cliente=new ArrayList<>();
 	/*
 	@OneToOne
 	private Cliente cliente;

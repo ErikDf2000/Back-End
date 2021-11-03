@@ -12,7 +12,7 @@ public class Inscripcion {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idinscriocion;
+	private int id;
 	
 	private boolean estado;
 	
@@ -21,7 +21,8 @@ public class Inscripcion {
 	@ManyToOne
 	private Planpago planpago;
 	
-	private int id;
+	@ManyToOne
+	private Clase clase;
 	 
 	
 

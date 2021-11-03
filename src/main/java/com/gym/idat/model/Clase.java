@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class Clase  {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idclase;
+	private int id;
 	private String nombre;
 	private int cuposmax;
 	@DateTimeFormat(pattern="yyyy-MM-dd",iso=ISO.DATE)
