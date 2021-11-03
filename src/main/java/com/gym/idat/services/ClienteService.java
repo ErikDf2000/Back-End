@@ -43,10 +43,7 @@ public class ClienteService {
 	        return repository.findByNombreContainsOrApellidoContains(n, a);
 	    }
 
-	    public String deleteCliente(int id) {
-	        repository.deleteById(id);
-	        return "cliente removido!! " + id;
-	    }
+	   
 
 	    public Cliente updateCliente(Cliente cliente) {
 	    	Cliente existingCliente = repository.findById(cliente.getId()).orElse(null);

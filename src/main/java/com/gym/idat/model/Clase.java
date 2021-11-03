@@ -13,7 +13,6 @@ public class Clase  {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String nombre;
 	private int cuposmax;
 	@DateTimeFormat(pattern="yyyy-MM-dd",iso=ISO.DATE)
 	private LocalDate inicio;

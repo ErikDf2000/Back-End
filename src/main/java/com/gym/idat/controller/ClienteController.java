@@ -3,7 +3,6 @@ package com.gym.idat.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,17 +22,13 @@ public class ClienteController {
 	 	@Autowired
 	    private ClienteService service;
 
-	    @PostMapping("/registrar")
+	    @PostMapping
 	    public Cliente agregar(@RequestBody Cliente cliente) {
 	        return service.save(cliente);
 	    }
 
-	   /* @PostMapping("/registrar")
-	    public List<Cliente> addClientes(@RequestBody List<Cliente> cliente) {
-	        return service.save(cliente);
-	    }*/
-
-	    @GetMapping("/lista")
+	  
+	    @GetMapping
 	    public List<Cliente> findAllCliente() {
 	        return service.getClientes();
 	    }
@@ -53,8 +48,5 @@ public class ClienteController {
 	        return service.updateCliente(cliente);
 	    }
 
-	    @DeleteMapping("/borrar/{id}")
-	    public String deleteCliente(@PathVariable int id) {
-	        return service.deleteCliente(id);
-	    }
+	   
 }

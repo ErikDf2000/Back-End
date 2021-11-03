@@ -3,14 +3,15 @@ package com.gym.idat.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gym.idat.model.Clase;
 import com.gym.idat.model.Disciplinas;
 import com.gym.idat.services.DisciplinaService;
 
@@ -21,12 +22,12 @@ public class DisciplinaController {
 	@Autowired
     private DisciplinaService service;
 
-    @PostMapping("/registrar")
+    @PostMapping
     public Disciplinas addDisciplina(@RequestBody Disciplinas disciplinas) {
         return service.save(disciplinas);
     }
 
-    @GetMapping("/lista")
+    @GetMapping
     public List<Disciplinas> findAllCliente() {
         return service.getDisciplinas();
     }
@@ -41,8 +42,10 @@ public class DisciplinaController {
         return service.getDisciplinaByNombre(nombre);
     }
     
-    @DeleteMapping("/borrar/{id}")
-    public String deleteDisciplina(@PathVariable int id) {
-        return service.deleteDisciplina(id);
+    @PutMapping
+    public Disciplinas updateDisciplina(@RequestBody Disciplinas disciplinas) {
+        return service.updateDisciplinas(disciplinas);
     }
+    
+   
 }

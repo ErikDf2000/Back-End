@@ -26,4 +26,13 @@ public class ClaseService {
         return "Clase removida!! " + id;
     }
 
+    public Clase updateClase(Clase clase) {
+    	Clase existingClase = repository.findById(clase.getId()).orElse(null);
+    	existingClase.setCuposmax(clase.getCuposmax());
+    	existingClase.setInicio(clase.getInicio());
+    	existingClase.setFin(clase.getFin());
+        existingClase.setDisciplinas(clase.getDisciplinas());
+        existingClase.setHorario(clase.getHorario());
+        return repository.save(existingClase);
+    }
 }

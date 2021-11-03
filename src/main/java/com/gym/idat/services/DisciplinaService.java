@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.gym.idat.model.Clase;
 import com.gym.idat.model.Disciplinas;
 import com.gym.idat.repository.DisciplinaRepository;
 
@@ -30,9 +31,10 @@ public class DisciplinaService {
         return repository.findByNombre(nombre);
     }
     
-    public String deleteDisciplina(int id) {
-        repository.deleteById(id);
-        return "Disciplina removido!! " + id;
+    public Disciplinas updateDisciplinas (Disciplinas  disciplinas ) {
+    	Disciplinas existingDisciplinas  = repository.findById(disciplinas.getId()).orElse(null);
+    	existingDisciplinas .setNombre(disciplinas.getNombre());
+        return repository.save(existingDisciplinas);
     }
 
 
