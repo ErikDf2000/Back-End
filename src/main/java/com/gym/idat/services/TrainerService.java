@@ -14,13 +14,45 @@ public class TrainerService {
 	@Autowired
     private TrainerRepository repository;
 
-    public List<Trainers> listado(){
-        return repository.findAll();
-        }
 
-    public String  save( Trainers trainers){
-        repository.save(trainers);
-        return "Registro Exitoso";
-        }
+ 	public Trainers save(Trainers trainer) {
+        return repository.save(trainer);
+    }
+
+ 	
+
+    public List<Trainers> getTrainers() {
+        return repository.findAll();
+    }
+
+    public Trainers getTrainerById(int id) {
+        return repository.findById(id).orElse(null);
+    }
+
+    public Trainers getTrainerByNombre(String nombre) {
+        return repository.findByNombre(nombre);
+    }
+    
+    public List<Trainers> findByNombreOrApellido(String n, String a){
+        return repository.findByNombreContainsOrApellidoContains(n, a);
+    
+
+   
+    }
+
+    public Trainers updateTrainer(Trainers trainer) {
+    	Trainers existingTrainer = repository.findById(trainer.getId()).orElse(null);
+        existingTrainer.setNombre(trainer.getNombre());
+        existingTrainer.setApellido(trainer.getApellido());
+        existingTrainer.setFechaNac(trainer.getFechaNac());
+        existingTrainer.setTelefono(trainer.getTelefono());
+        existingTrainer.setDescripcion(trainer.getDescripcion());
+        existingTrainer.setDni(trainer.getDni());
+        existingTrainer.setGenero(trainer.getGenero());
+        existingTrainer.setPeso(trainer.getPeso());
+        existingTrainer.setAltura(trainer.getAltura());
+        
+        return repository.save(existingTrainer);
+    }
 
 }

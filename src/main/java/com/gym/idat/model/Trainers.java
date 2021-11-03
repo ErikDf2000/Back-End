@@ -29,6 +29,9 @@ public class Trainers{
 	private String descripcion;
 	private int dni;
 	private String genero;
+	private String altura;
+	private String peso;
+	
 	
 
 
