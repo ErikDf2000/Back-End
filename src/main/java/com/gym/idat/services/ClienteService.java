@@ -22,10 +22,7 @@ public class ClienteService {
 	        return repository.save(cliente);
 	    }
 
-	 	/*grabar una lista--? probar--
-	    public List<Cliente> save(List<Cliente> cliente) {
-	        return repository.saveAll(cliente);
-	    }*/
+	 	
 
 	    public List<Cliente> getClientes() {
 	        return repository.findAll();

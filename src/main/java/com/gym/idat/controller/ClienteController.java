@@ -16,7 +16,7 @@ import com.gym.idat.model.Cliente;
 import com.gym.idat.services.ClienteService;
 
 
-@RestController //indica que es un Servicio REST
+@RestController 
 @RequestMapping("/cliente")
 public class ClienteController {
 
@@ -24,14 +24,11 @@ public class ClienteController {
 	    private ClienteService service;
 
 	    @PostMapping("/registrar")
-	    public Cliente addCliente(@RequestBody Cliente cliente) {
+	    public Cliente agregar(@RequestBody Cliente cliente) {
 	        return service.save(cliente);
 	    }
 
-	   /* @PostMapping("/registrar")
-	    public List<Cliente> addClientes(@RequestBody List<Cliente> cliente) {
-	        return service.save(cliente);
-	    }*/
+	   
 
 	    @GetMapping("/lista")
 	    public List<Cliente> findAllCliente() {

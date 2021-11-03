@@ -16,18 +16,12 @@ public class ClaseController {
     private ClaseService service;
 
     @GetMapping
-    public List<Clase> lista(){
-        return service.listado();
-    }
+    public List<Clase>findAllClase(){ return service.listado();}
 
     @PostMapping
-    public String agregar(@RequestBody Clase clase){
-        return service.save(clase);
-    }
+    public String agregar(@RequestBody Clase clase){return service.save(clase);}
     
     @DeleteMapping("/{id}")
-    public String deleteClase(@PathVariable int id) {
-        return service.deleteClase(id);
-    }
+    public String deleteClase(@PathVariable int id) {return service.deleteClase(id); }
 
 }
