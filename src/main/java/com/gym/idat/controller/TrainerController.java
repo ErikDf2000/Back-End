@@ -27,12 +27,14 @@ public class TrainerController {
 
 	 @GetMapping 
 	    public List<Trainers>findAllTrainer(){
+		 
 		 return service.getTrainers();
 	    }
 	
 	
     @PostMapping
     public Trainers agregar(@RequestBody Trainers trainers) { 
+    	
     	return service.save(trainers);
     }
 
@@ -44,16 +46,27 @@ public class TrainerController {
     	return service.getTrainerById(id);
     }
 
-    /*@GetMapping("/{nombre}")
-    public Trainers findTrainerByNombre(@PathVariable String nombre) { 
-    	return service.getTrainerByNombre(nombre);
-    }*/
     
     @GetMapping(value = "/buscar")
     public ResponseEntity<?> findByNombreOrApellido(@RequestParam String dato){
         List<Trainers> find = service.findByNombreOrApellido(dato, dato);
         return ResponseEntity.status(HttpStatus.OK).body(find);
     }
+   
+    /*@GetMapping(value = "/busca")
+    public ResponseEntity<?> findByNombreAndApellido(@RequestParam String nombre,String apellido){
+       try {
+    	   List<Trainers> find = service.findByNombreAndApellido(nombre, apellido);
+    	   
+       if (find.isEmpty())return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No hay entrenadores.");
+		
+	        return ResponseEntity.status(HttpStatus.OK).body(find);
+		
+	} catch (Exception e) {
+		// TODO: handle exception
+	} 
+        
+    }*/
 
     @PutMapping("/actualizar")
     public Trainers updateTrainer(@RequestBody Trainers trainers) { return service.updateTrainer(trainers);

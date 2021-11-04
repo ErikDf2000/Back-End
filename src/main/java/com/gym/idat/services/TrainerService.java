@@ -29,16 +29,15 @@ public class TrainerService {
         return repository.findById(id).orElse(null);
     }
 
-   // public Trainers getTrainerByNombre(String nombre) {
-    //    return repository.findByNombre(nombre);
-    //}
+ 
     
     public List<Trainers> findByNombreOrApellido(String n, String a){
-        return repository.findByNombreContainsOrApellidoContains(n, a);
-    
-
-   
+        return repository.findByNombreContainsOrApellidoContains(n, a); 
     }
+    /*public List<Trainers> findByNombreAndApellido(String n, String a){
+        return repository.findByNombreContainsAndApellidoContains(n, a); 
+    }*/
+
 
     public Trainers updateTrainer(Trainers trainer) {
     	Trainers existingTrainer = repository.findById(trainer.getId()).orElse(null);

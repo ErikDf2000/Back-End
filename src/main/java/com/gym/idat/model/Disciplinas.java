@@ -1,6 +1,10 @@
 package com.gym.idat.model;
 
 import lombok.Data;
+
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.*;
 @Data
 @Entity
@@ -14,6 +18,6 @@ public class Disciplinas  {
 	private String nombre;
 	private String descripcion;
 	
-
+	
 
 }
