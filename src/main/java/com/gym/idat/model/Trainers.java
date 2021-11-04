@@ -31,6 +31,7 @@ public class Trainers{
 	private String genero;
 	private String altura;
 	private String peso;
+	private String foto;
 	
 	
 

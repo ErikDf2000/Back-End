@@ -51,6 +51,7 @@ public class TrainerService {
         existingTrainer.setGenero(trainer.getGenero());
         existingTrainer.setPeso(trainer.getPeso());
         existingTrainer.setAltura(trainer.getAltura());
+        existingTrainer.setFoto(trainer.getFoto());
         
         return repository.save(existingTrainer);
     }
