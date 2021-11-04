@@ -33,7 +33,8 @@ public class DisciplinaService {
     
     public Disciplinas updateDisciplinas (Disciplinas  disciplinas ) {
     	Disciplinas existingDisciplinas  = repository.findById(disciplinas.getId()).orElse(null);
-    	existingDisciplinas .setNombre(disciplinas.getNombre());
+    	existingDisciplinas.setNombre(disciplinas.getNombre());
+    	existingDisciplinas.setDescripcion(disciplinas.getDescripcion());
         return repository.save(existingDisciplinas);
     }
 
