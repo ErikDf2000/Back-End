@@ -29,9 +29,9 @@ public class TrainerService {
         return repository.findById(id).orElse(null);
     }
 
-    public Trainers getTrainerByNombre(String nombre) {
-        return repository.findByNombre(nombre);
-    }
+   // public Trainers getTrainerByNombre(String nombre) {
+    //    return repository.findByNombre(nombre);
+    //}
     
     public List<Trainers> findByNombreOrApellido(String n, String a){
         return repository.findByNombreContainsOrApellidoContains(n, a);

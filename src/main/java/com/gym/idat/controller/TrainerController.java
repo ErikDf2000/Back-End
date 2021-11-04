@@ -44,10 +44,10 @@ public class TrainerController {
     	return service.getTrainerById(id);
     }
 
-    @GetMapping("/{nombre}")
+    /*@GetMapping("/{nombre}")
     public Trainers findTrainerByNombre(@PathVariable String nombre) { 
     	return service.getTrainerByNombre(nombre);
-    }
+    }*/
     
     @GetMapping(value = "/buscar")
     public ResponseEntity<?> findByNombreOrApellido(@RequestParam String dato){
