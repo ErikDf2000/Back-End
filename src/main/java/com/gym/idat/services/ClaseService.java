@@ -25,9 +25,8 @@ public class ClaseService {
     public Clase updateClase(Clase clase) {
     	Clase existingClase = repository.findById(clase.getId()).orElse(null);
     	existingClase.setCuposmax(clase.getCuposmax());
-    	existingClase.setInicio(clase.getInicio());
-    	existingClase.setFin(clase.getFin());
         existingClase.setDisciplina(clase.getDisciplina());
+        existingClase.setHorario(clase.getHorario());
         return repository.save(existingClase);
     }
 }

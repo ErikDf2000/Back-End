@@ -15,10 +15,6 @@ public class Clase  {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private int cuposmax;
-	@DateTimeFormat(pattern="yyyy-MM-dd",iso=ISO.DATE)
-	private LocalDate inicio;
-	@DateTimeFormat(pattern="yyyy-MM-dd",iso=ISO.DATE)
-	private LocalDate fin;
 
 	
 	@ManyToOne(optional = false)
@@ -30,9 +26,9 @@ public class Clase  {
 	
 	
 
-   /* @OneToMany
-	private List<Horario> horario;
-	*/
+    @OneToMany
+	private Horario horario;
+	
 	
 
 
