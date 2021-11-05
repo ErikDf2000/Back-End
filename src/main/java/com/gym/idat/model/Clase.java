@@ -4,8 +4,11 @@ import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
+
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Data
@@ -27,7 +30,7 @@ public class Clase  {
 	
 
     @OneToMany
-	private Horario horario;
+	private Collection<Horario> horario=new ArrayList<>();;
 	
 	
 

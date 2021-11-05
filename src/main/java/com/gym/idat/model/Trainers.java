@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -46,8 +47,8 @@ public class Trainers{
 			joinColumns = {  @JoinColumn(name = "id_trainer",referencedColumnName = "id")  },
 			inverseJoinColumns = { @JoinColumn(name = "id_disciplina",referencedColumnName = "id")	}
 			)	
-	@ManyToMany
-	private List<Disciplinas> disciplinas;
+	@ManyToOne
+	private Disciplinas disciplinas;
 
 
 

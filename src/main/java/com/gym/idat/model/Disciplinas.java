@@ -25,6 +25,4 @@ public class Disciplinas  {
 	private Collection<Clase> clase=new ArrayList<>();*/
 
 
-	@ManyToMany(mappedBy = "disciplinas")
-	private List<Trainers> trainers;
 }
