@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Data
 @Entity
@@ -24,11 +25,9 @@ public class Planpago {
 	
 	@OneToMany//referencia FK a nivel de entidades
 	private Collection<Cliente> cliente=new ArrayList<>();
-	/*
-	@OneToOne
-	private Cliente cliente;
-	*/
-	/*@ManyToOne
-	private Pago pago;
-*/	
+	
+	@OneToMany(cascade = CascadeType.ALL,mappedBy = "planpago")//referencia FK a nivel de entidades
+	private List<Pago> pago;
+	
+	
 }

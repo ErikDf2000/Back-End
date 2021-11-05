@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Entity
@@ -19,13 +20,20 @@ public class Clase  {
 	@DateTimeFormat(pattern="yyyy-MM-dd",iso=ISO.DATE)
 	private LocalDate fin;
 
-	@ManyToOne
-	private Disciplinas disciplinas;
+	
+	@ManyToOne(optional = false)
+	private Disciplinas disciplina;
+	
+	//@JoinColumn(name = "trainers_id",referencedColumnName = "id")
 	@ManyToOne
 	private Trainers trainers;
-	@ManyToOne
-	private Horario horario;
+	
+	
 
+   /* @OneToMany
+	private List<Horario> horario;
+	*/
+	
 
 
 }

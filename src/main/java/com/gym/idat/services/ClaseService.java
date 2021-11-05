@@ -21,18 +21,13 @@ public class ClaseService {
         repository.save(clase);
         return "Registro Exitoso";
     }
-    public String deleteClase(int id) {
-        repository.deleteById(id);
-        return "Clase removida!! " + id;
-    }
 
     public Clase updateClase(Clase clase) {
     	Clase existingClase = repository.findById(clase.getId()).orElse(null);
     	existingClase.setCuposmax(clase.getCuposmax());
     	existingClase.setInicio(clase.getInicio());
     	existingClase.setFin(clase.getFin());
-        existingClase.setDisciplinas(clase.getDisciplinas());
-        existingClase.setHorario(clase.getHorario());
+        existingClase.setDisciplina(clase.getDisciplina());
         return repository.save(existingClase);
     }
 }

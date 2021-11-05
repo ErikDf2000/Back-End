@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Data
 @Entity
@@ -24,10 +25,11 @@ public class Pago {
     @ManyToOne
     private Mensualidad mensualidad;
     
-    @OneToMany//referencia FK a nivel de entidades
-	private Collection<Planpago> pagos=new ArrayList<>();
+    
 	
 
+    @ManyToOne
+	private Planpago planpago;
 //    @PrePersist
 //    void Prepersit() {
 //        estado = false;

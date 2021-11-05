@@ -2,13 +2,13 @@ package com.gym.idat.model;
 
 import lombok.Data;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 import javax.persistence.*;
 @Data
 @Entity
-@Table(name = "disciplina")
 public class Disciplinas  {
 	
 	
@@ -18,6 +18,13 @@ public class Disciplinas  {
 	private String nombre;
 	private String descripcion;
 	
+	/*@OneToMany(cascade = CascadeType.ALL,mappedBy = "disciplina")
+	private List<Clase> clase;
 	
+	@OneToMany(mappedBy="clase")//referencia FK a nivel de entidades
+	private Collection<Clase> clase=new ArrayList<>();*/
 
+
+	@ManyToMany(mappedBy = "disciplinas")
+	private List<Trainers> trainers;
 }

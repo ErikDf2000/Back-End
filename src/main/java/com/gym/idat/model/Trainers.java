@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
-import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,9 +14,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
-
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -41,9 +38,16 @@ public class Trainers{
 	private String foto;
 	
 	
-
+	/*@OneToMany(cascade = CascadeType.ALL,mappedBy = "trainers")
+	private List<Clase> clase;*/
 	
 	
+	@JoinTable(name = "disciplinas_de_trainers",
+			joinColumns = {  @JoinColumn(name = "id_trainer",referencedColumnName = "id")  },
+			inverseJoinColumns = { @JoinColumn(name = "id_disciplina",referencedColumnName = "id")	}
+			)	
+	@ManyToMany
+	private List<Disciplinas> disciplinas;
 
 
 

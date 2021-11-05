@@ -25,10 +25,6 @@ public class ClaseController {
         return service.save(clase);
     }
     
-    @DeleteMapping("/{id}")
-    public String deleteClase(@PathVariable int id) {
-        return service.deleteClase(id);
-    }
     @PutMapping("/actualizar")
     public Clase updateClase(@RequestBody Clase clase) {
         return service.updateClase(clase);
