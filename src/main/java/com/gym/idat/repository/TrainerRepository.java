@@ -10,5 +10,4 @@ import com.gym.idat.model.Trainers;
 public interface TrainerRepository extends JpaRepository<Trainers, Integer> {
 
 	List<Trainers> findByNombreContainsOrApellidoContains(String n, String a);
-	List<Trainers> findByNombreContainsAndApellidoContains(String n, String a);
 }
