@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.gym.idat.model.Disciplinas;
 import com.gym.idat.model.Horario;
 import com.gym.idat.repository.HorarioRepository;
 
@@ -13,11 +14,11 @@ public class HorarioService {
 		@Autowired
 	    private HorarioRepository repository;
 
-	    public List<Horario> listado(){
+	    public List<Horario> getHorarios(){
 	        return repository.findAll();}
 
-	    public String  save(Horario horario){
-	        repository.save(horario);
-	        return "Registro Exitoso";}
-
+	    public Horario save(Horario disciplina) {
+	        return repository.save(disciplina);
+	    }
+	  
 }

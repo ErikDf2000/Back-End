@@ -1,5 +1,6 @@
 package com.gym.idat.services;
 
+import com.gym.idat.model.Disciplinas;
 import com.gym.idat.model.Pago;
 import com.gym.idat.repository.PagoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,40 +17,16 @@ public class PagoService {
     @Autowired
     private PagoRepository repository;
 
-    public List<Pago> getAll(){
+    public Pago save(Pago pago) {
+        return repository.save(pago);
+    }
+
+    public List<Pago> getPago() {
         return repository.findAll();
     }
 
-    public Boolean getById(int id){
-        return repository.existsById(id);
-    }
-
-    public String create(Pago pago){
-        repository.save(pago);
-        return "Pago Creado.";
-    }
-
-    public String update(Pago pago, int id){
-        Pago pagoUpd = repository.getById(id);
-
-        pagoUpd.setFechaPago(pago.getFechaPago());
-        pagoUpd.setDescripcion(pago.getDescripcion());
-        pagoUpd.setEstado(pago.getEstado());
-        pagoUpd.setMensualidad(pago.getMensualidad());
-
-        repository.save(pagoUpd);
-        return "Pago Actualizado.";
-    }
-
-    public String pagar(Pago pago, int id){
-        LocalDate date = LocalDate.now();
-        Pago pagar = repository.getById(id);
-
-        pagar.setDescripcion(pago.getDescripcion());
-        pagar.setFechaPago(date);
-        pagar.setEstado(true);
-        repository.save(pagar);
-        return "Pago Realizado del mes de "+pagar.getMensualidad().getMes();
+    public Pago getPagoById(int id) {
+        return repository.findById(id).orElse(null);
     }
 
     /*public List<Pago> getPagosByIdAlumno(int id){
