@@ -14,6 +14,9 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -22,6 +25,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+
 public class Trainers{
 
 	@Id
