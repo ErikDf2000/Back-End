@@ -20,7 +20,7 @@ public class Cliente  {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	
 	private String nombre;
 	
@@ -28,7 +28,7 @@ public class Cliente  {
 	
 	private String sexo;	
 	
-	private int celular;
+	private Long celular;
 	
     private String correo;
 	

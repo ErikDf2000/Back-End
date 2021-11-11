@@ -9,7 +9,7 @@ import com.gym.idat.model.Mensualidad;
 
 
 @Repository
-public interface MensualidadRepository extends JpaRepository<Mensualidad, Integer> {
+public interface MensualidadRepository extends JpaRepository<Mensualidad, Long> {
 
 
 }

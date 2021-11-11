@@ -24,7 +24,7 @@ import java.time.LocalTime;
 public class Horario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private LocalDate fechaIni;
     private LocalDate fechaFin;

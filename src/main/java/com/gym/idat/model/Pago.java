@@ -14,7 +14,7 @@ import java.util.List;
 public class Pago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private LocalDate fechaPago;
     private String descripcion;

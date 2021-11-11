@@ -20,8 +20,8 @@ import java.util.List;
 public class Clase  {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	private int cuposmax;
+	private Long id;
+	private Long cuposmax;
 
 	
 	@ManyToOne(optional = false)

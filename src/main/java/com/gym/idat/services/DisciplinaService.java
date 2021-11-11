@@ -23,7 +23,7 @@ public class DisciplinaService {
         return repository.findAll();
     }
 
-    public Disciplinas getDisciplinaById(int id) {
+    public Disciplinas getDisciplinaById(Long id) {
         return repository.findById(id).orElse(null);
     }
 

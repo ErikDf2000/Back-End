@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Repository
-public interface PagoRepository extends JpaRepository<Pago, Integer> {
+public interface PagoRepository extends JpaRepository<Pago, Long> {
    // List<Pago> findByPlan_id(int id);
 
 

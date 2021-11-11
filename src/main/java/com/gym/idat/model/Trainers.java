@@ -30,13 +30,13 @@ public class Trainers{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	private String nombre;
 	private String apellido;
 	private LocalDate fechaNac;
-	private int telefono;
+	private Long telefono;
 	private String descripcion;
-	private int dni;
+	private Long dni;
 	private String genero;
 	private String altura;
 	private String peso;

@@ -18,7 +18,7 @@ public class MensualidadService {
         return repository.findAll();
     }
 
-    public Boolean getById(Integer id){
+    public Boolean getById(Long id){
         return repository.existsById(id);
     }
 
@@ -27,7 +27,7 @@ public class MensualidadService {
         return "Mensualidad Creada.";
     }
 
-    public String update(Mensualidad mensualidad,Integer id){
+    public String update(Mensualidad mensualidad,Long id){
         Mensualidad mensualidadUpd = repository.getById(id);
 
         mensualidadUpd.setFechaInicio(mensualidad.getFechaInicio());

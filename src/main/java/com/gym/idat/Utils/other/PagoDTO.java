@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class PagoDTO {
-    private int cliente;
-    private int planpago;
+    private Long cliente;
+    private Long planpago;
 	private boolean estado;
 }

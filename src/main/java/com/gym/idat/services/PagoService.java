@@ -25,7 +25,7 @@ public class PagoService {
         return repository.findAll();
     }
 
-    public Pago getPagoById(int id) {
+    public Pago getPagoById(Long id) {
         return repository.findById(id).orElse(null);
     }
 
