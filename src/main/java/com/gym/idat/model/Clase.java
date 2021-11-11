@@ -30,7 +30,6 @@ public class Clase  {
 	//@JoinColumn(name = "trainers_id",referencedColumnName = "id")
 	
 	@ManyToOne
-	@JoinColumn(name = "trainers_id")
 	private Trainers trainers;
 	
 	
