@@ -41,7 +41,7 @@ public class TrainerController {
    
 
     @GetMapping("/{id}")
-    public Trainers findTrainerById(@PathVariable int id) {
+    public Trainers findTrainerById(@PathVariable Long id) {
     	
     	return service.getTrainerById(id);
     }

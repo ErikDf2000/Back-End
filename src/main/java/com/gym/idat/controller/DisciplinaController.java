@@ -33,7 +33,7 @@ public class DisciplinaController {
     }
 
     @GetMapping("/{id}")
-    public Disciplinas findDisciplinaById(@PathVariable int id) {
+    public Disciplinas findDisciplinaById(@PathVariable Long id) {
         return service.getDisciplinaById(id);
     }
 
