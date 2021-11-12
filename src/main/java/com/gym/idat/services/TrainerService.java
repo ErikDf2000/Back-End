@@ -26,7 +26,7 @@ public class TrainerService {
     }
 
     public Trainers getTrainerById(Long id) {
-        return repository.findById(id).orElse(null);
+        return repository.findTrainerById(id);
     }
 
  

@@ -17,6 +17,7 @@ public class Disciplinas  {
 	private Long id;
 	private String nombre;
 	private String descripcion;
+	private String imagen;
 	
 	/*@OneToMany(cascade = CascadeType.ALL,mappedBy = "disciplina")
 	private List<Clase> clase;

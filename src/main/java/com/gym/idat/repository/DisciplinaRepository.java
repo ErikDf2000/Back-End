@@ -9,4 +9,5 @@ import com.gym.idat.model.Disciplinas;
 public interface DisciplinaRepository extends JpaRepository<Disciplinas, Long> {
 
 	Disciplinas findByNombre(String nombre);
+	public Disciplinas findDisciplinaById(Long id);
 }

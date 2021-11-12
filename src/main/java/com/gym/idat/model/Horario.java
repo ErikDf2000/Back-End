@@ -34,7 +34,7 @@ public class Horario {
 
     private boolean rutinario;
     
-    /*@ManyToOne
+   /* @ManyToOne
 	private Clase clase;
 */
 	

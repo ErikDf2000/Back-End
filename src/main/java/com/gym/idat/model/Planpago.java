@@ -23,11 +23,11 @@ public class Planpago {
 	private LocalDate inicio;
 	private LocalDate finn ;
 	
-	@OneToMany//referencia FK a nivel de entidades
-	private Collection<Cliente> cliente=new ArrayList<>();
+	//@OneToMan //yreferencia FK a nivel de entidades
+	//private Collection<Cliente> cliente=new ArrayList<>();
 	
-	@OneToMany(cascade = CascadeType.ALL,mappedBy = "planpago")//referencia FK a nivel de entidades
-	private List<Pago> pago;
+	//@OneToMany//(cascade = CascadeType.ALL,mappedBy = "planpago")
+	//private List<Pago> pago;
 	
 	
 }

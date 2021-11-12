@@ -24,7 +24,7 @@ public class DisciplinaService {
     }
 
     public Disciplinas getDisciplinaById(Long id) {
-        return repository.findById(id).orElse(null);
+        return repository.findDisciplinaById(id);
     }
 
     public Disciplinas getDisciplinaByNombre(String nombre) {
@@ -35,6 +35,7 @@ public class DisciplinaService {
     	Disciplinas existingDisciplinas  = repository.findById(disciplinas.getId()).orElse(null);
     	existingDisciplinas.setNombre(disciplinas.getNombre());
     	existingDisciplinas.setDescripcion(disciplinas.getDescripcion());
+    	existingDisciplinas.setImagen(disciplinas.getImagen());
         return repository.save(existingDisciplinas);
     }
 

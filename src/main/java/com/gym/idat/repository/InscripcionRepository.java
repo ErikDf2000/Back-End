@@ -2,7 +2,6 @@ package com.gym.idat.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.gym.idat.model.Cliente;
 import com.gym.idat.model.Inscripcion;
 
 

@@ -1,9 +1,13 @@
 package com.gym.idat.controller;
 
 
+import com.gym.idat.Utils.other.ClaseDTO;
 import com.gym.idat.model.Clase;
 import com.gym.idat.services.ClaseService;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,10 +23,15 @@ public class ClaseController {
     public List<Clase> lista(){
         return service.listado();
     }
-
+/*
     @PostMapping
     public String agregar(@RequestBody Clase clase){
         return service.save(clase);
+    }*/
+
+    @PostMapping("/realizar")
+    public ResponseEntity<?> RealizarClase(@RequestBody ClaseDTO pagoDTO){
+        return service.RealizarServiceClase(pagoDTO);
     }
     
     @PutMapping("/actualizar")

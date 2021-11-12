@@ -27,17 +27,13 @@ public class Clase  {
 	@ManyToOne(optional = false)
 	private Disciplinas disciplina;
 	
-	//@JoinColumn(name = "trainers_id",referencedColumnName = "id")
 	
 	@ManyToOne
 	private Trainers trainers;
 	
-	
-
-    @OneToMany
-	private Collection<Horario> horario=new ArrayList<>();;
-	
-	
+	@ManyToOne
+	private Salon salon;
+    
 
 
 }

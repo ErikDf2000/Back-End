@@ -31,10 +31,10 @@ public class Trainers{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nombre;
-	private String apellido;
+	private String nombre;//
+	private String apellido;//
 	private LocalDate fechaNac;
-	private Long telefono;
+	private Long telefono;//
 	private String descripcion;
 	private Long dni;
 	private String genero;
