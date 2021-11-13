@@ -39,7 +39,6 @@ public class ClaseService {
     	existingClase.setCuposmax(clase.getCuposmax());
         existingClase.setDisciplina(clase.getDisciplina());
         existingClase.setSalon(clase.getSalon());
-        //existingClase.setHorario(clase.getHorario());
         return repository.save(existingClase);
     }
     

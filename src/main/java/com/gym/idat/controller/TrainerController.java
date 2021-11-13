@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gym.idat.Utils.other.TrainerDTO;
 import com.gym.idat.model.Trainers;
 import com.gym.idat.services.TrainerService;
+
 
 @RestController
 @RequestMapping("/trainer")
@@ -53,22 +55,13 @@ public class TrainerController {
         return ResponseEntity.status(HttpStatus.OK).body(find);
     }
    
-    /*@GetMapping(value = "/busca")
-    public ResponseEntity<?> findByNombreAndApellido(@RequestParam String nombre,String apellido){
-       try {
-    	   List<Trainers> find = service.findByNombreAndApellido(nombre, apellido);
-    	   
-       if (find.isEmpty())return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No hay entrenadores.");
-		
-	        return ResponseEntity.status(HttpStatus.OK).body(find);
-		
-	} catch (Exception e) {
-		// TODO: handle exception
-	} 
-        
-    }*/
 
-    @PutMapping("/actualizar")
-    public Trainers updateTrainer(@RequestBody Trainers trainers) { return service.updateTrainer(trainers);
+    /*@PutMapping("/actualizar")
+    public Trainers updateTrainer(@RequestBody Trainers trainers) 
+    { return service.updateTrainer(trainers);
+    }*/
+    @PutMapping("/update")
+    public ResponseEntity<?> updateTrainer(@RequestBody TrainerDTO trainerDTO){
+        return service.UpdateTrainer(trainerDTO);
     }
 }
