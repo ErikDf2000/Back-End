@@ -34,12 +34,32 @@ public class ClaseService {
         return "Registro Exitoso";
     }*/
 
-    public Clase updateClase(Clase clase) {
+    /*public Clase updateClase(Clase clase) {
     	Clase existingClase = repository.findById(clase.getId()).orElse(null);
     	existingClase.setCuposmax(clase.getCuposmax());
         existingClase.setDisciplina(clase.getDisciplina());
         existingClase.setSalon(clase.getSalon());
         return repository.save(existingClase);
+    }*/
+    public ResponseEntity<?> updateClase(ClaseDTO claseDTO) {
+        Map<String, Object> respon = new HashMap<>();
+        Disciplinas disciplina = repositorydisc.findDisciplinaById(claseDTO.getDisciplina());
+        Trainers trainers = repositorytrai.findTrainerById(claseDTO.getTrainer());
+        Salon salon = repositorysal.findSalonById(claseDTO.getTrainer());
+        Clase clase = repository.findClaseById(claseDTO.getId());
+
+        {
+
+            clase.setDisciplina(disciplina);
+            clase.setTrainers(trainers);
+            clase.setSalon(salon);
+            clase.setCuposmax(claseDTO.getCuposmax());
+            clase.setHoraIni(claseDTO.getHoraIni());
+            clase.setHoraFin(claseDTO.getHoraFin());
+            repository.save(clase);
+            respon.put("Message", "Actualizado");
+            return new ResponseEntity<>(respon, HttpStatus.OK);
+        }
     }
     
     public ResponseEntity<?> RealizarServiceClase(ClaseDTO claseDTO){
@@ -48,12 +68,14 @@ public class ClaseService {
         Salon salon = repositorysal.findSalonById(claseDTO.getSalon());       
         Map<String, Object> respon = new HashMap<>();
 
-        Clase pago = new Clase();
-        pago.setDisciplina(disciplina);
-        pago.setTrainers(trainer);
-        pago.setSalon(salon);
-        pago.setCuposmax(claseDTO.getCuposmax());
-        repository.save(pago);
+        Clase clase = new Clase();
+        clase.setDisciplina(disciplina);
+        clase.setTrainers(trainer);
+        clase.setSalon(salon);
+        clase.setCuposmax(claseDTO.getCuposmax());
+        clase.setHoraIni(claseDTO.getHoraIni());
+        clase.setHoraFin(claseDTO.getHoraFin());
+        repository.save(clase);
 
         respon.put("Message", "Realizado correctamente");
         return new ResponseEntity<>(respon ,HttpStatus.OK);

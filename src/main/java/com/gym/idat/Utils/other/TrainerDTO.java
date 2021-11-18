@@ -1,6 +1,8 @@
 package com.gym.idat.Utils.other;
 
 
+import java.time.LocalDate;
+
 import lombok.Data;
 
 
@@ -8,7 +10,7 @@ import lombok.Data;
 @Data 
 public class TrainerDTO {
 	
-	    private Long id;
+	 private Long id;
 	   // private LocalDate fechaNac;
 		private Long telefono;//
 		private String descripcion;

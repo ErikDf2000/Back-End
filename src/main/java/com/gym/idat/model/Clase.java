@@ -1,18 +1,13 @@
 package com.gym.idat.model;
 
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.DateTimeFormat.ISO;
-
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -22,7 +17,17 @@ public class Clase  {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Long cuposmax;
+	
+	//@Temporal(TemporalType.TIMESTAMP)
+	//@JsonFormat(pattern = "HH:mm:ss.SSSZ",shape = JsonFormat.Shape.STRING)
+//	@JsonFormat(pattern = "HH:mm")
+	//@DateTimeFormat( iso = DateTimeFormat.ISO.TIME,pattern = "HH:mm")
+	private LocalDateTime horaIni;
 
+	//@Temporal(TemporalType.TIMESTAMP)
+	//@JsonFormat(pattern = "HH:mm")
+	//@DateTimeFormat( iso = DateTimeFormat.ISO.TIME,pattern = "HH:mm")
+	private LocalDateTime horaFin;
 	
 	@ManyToOne(optional = false)
 	private Disciplinas disciplina;

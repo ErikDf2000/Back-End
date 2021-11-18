@@ -9,6 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ClaseRepository extends JpaRepository<Clase, Long> {
 	
-
-   // public List<Clase> findAllByTrainerId(Long id);
+	public Clase findClaseById(Long id);
+   // public Clase findAllById(Long id);
 }

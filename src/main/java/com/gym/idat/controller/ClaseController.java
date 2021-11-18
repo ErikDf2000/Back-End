@@ -34,8 +34,13 @@ public class ClaseController {
         return service.RealizarServiceClase(pagoDTO);
     }
     
-    @PutMapping("/actualizar")
+    /*@PutMapping("/actualizar")
     public Clase updateClase(@RequestBody Clase clase) {
         return service.updateClase(clase);
+    }*/
+    
+    @PutMapping("/actualizar")
+    public ResponseEntity<?> updateClase(@RequestBody ClaseDTO pagoDTO){
+        return service.updateClase(pagoDTO);
     }
 }

@@ -50,7 +50,9 @@ public class TrainerService {
     }*/
 
 
-   /* public Trainers updateTrainer(Trainers trainer) {
+   /* public Trainers UpdateTrainer(Trainers trainer) {
+    	
+    	Disciplinas disciplina = repositorydisc.findDisciplinaById(trainer.getDisciplinas());
     	Trainers existingTrainer = repository.findTrainerById(trainer.getId());
         existingTrainer.setNombre(trainer.getNombre());//
         existingTrainer.setApellido(trainer.getApellido());//
@@ -62,7 +64,7 @@ public class TrainerService {
         existingTrainer.setPeso(trainer.getPeso());//
         existingTrainer.setAltura(trainer.getAltura());//
         existingTrainer.setFoto(trainer.getFoto());//
-        existingTrainer.setDisciplinas(trainer.getDisciplinas());//
+        existingTrainer.setDisciplinas(disciplina);//
         
         return repository.save(existingTrainer);
     }*/
