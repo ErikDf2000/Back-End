@@ -3,6 +3,7 @@ package com.gym.idat.services;
 import com.gym.idat.Utils.other.ClaseDTO;
 import com.gym.idat.model.*;
 import com.gym.idat.repository.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -80,4 +81,10 @@ public class ClaseService {
         respon.put("Message", "Realizado correctamente");
         return new ResponseEntity<>(respon ,HttpStatus.OK);
     }
+    
+    public List<Clase> getClasesByIdDisciplina(Long id){
+        return repository.findByDisciplina_Id(id);
+    }
+
 }
+

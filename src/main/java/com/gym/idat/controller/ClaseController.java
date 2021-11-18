@@ -7,6 +7,7 @@ import com.gym.idat.services.ClaseService;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,5 +43,10 @@ public class ClaseController {
     @PutMapping("/actualizar")
     public ResponseEntity<?> updateClase(@RequestBody ClaseDTO pagoDTO){
         return service.updateClase(pagoDTO);
+    }
+    
+    @GetMapping("/disciplina/{id}")
+    public ResponseEntity<?> claseBydisciplina(@PathVariable Long id){
+        return ResponseEntity.status(HttpStatus.OK).body(service.getClasesByIdDisciplina(id));
     }
 }
