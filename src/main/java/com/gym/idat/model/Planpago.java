@@ -3,6 +3,9 @@ package com.gym.idat.model;
 import lombok.Data;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,9 +26,12 @@ public class Planpago {
 	private LocalDate inicio;
 	private LocalDate finn ;
 	
-	//@OneToMan //yreferencia FK a nivel de entidades
-	//private Collection<Cliente> cliente=new ArrayList<>();
+	@JsonIgnore
+	@OneToMany(mappedBy="planpago") //referencia FK a nivel de entidades
+	private Collection<Reserva> reserva=new ArrayList<>();
 	
+	/* @OneToOne(mappedBy="planpago")
+	   private Cliente cliente;*/
 	//@OneToMany//(cascade = CascadeType.ALL,mappedBy = "planpago")
 	//private List<Pago> pago;
 	

@@ -5,7 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Data
@@ -31,5 +36,12 @@ public class Cliente  {
 	private Long celular;
 	
     private String correo;
-	
-}
+    
+    
+    /*@ManyToOne
+	private Reserva reserva;
+    @OneToOne
+    @JoinColumn
+    private Planpago planpago;
+*/
+    }
