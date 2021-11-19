@@ -1,5 +1,7 @@
 package com.gym.idat.model;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +22,8 @@ public class Reserva {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	private Date fecha;
 	
 	@OneToOne//referencia FK a nivel de entidades
 	//private Collection<Cliente> cliente=new ArrayList<>();
