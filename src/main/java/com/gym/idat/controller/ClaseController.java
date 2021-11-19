@@ -31,8 +31,8 @@ public class ClaseController {
     }*/
 
     @PostMapping("/realizar")
-    public ResponseEntity<?> RealizarClase(@RequestBody ClaseDTO pagoDTO){
-        return service.RealizarServiceClase(pagoDTO);
+    public ResponseEntity<?> RealizarClase(@RequestBody ClaseDTO claseDTO){
+        return service.RealizarServiceClase(claseDTO);
     }
     
     /*@PutMapping("/actualizar")
@@ -41,8 +41,8 @@ public class ClaseController {
     }*/
     
     @PutMapping("/actualizar")
-    public ResponseEntity<?> updateClase(@RequestBody ClaseDTO pagoDTO){
-        return service.updateClase(pagoDTO);
+    public ResponseEntity<?> updateClase(@RequestBody ClaseDTO claseDTO){
+        return service.updateClase(claseDTO);
     }
     
     @GetMapping("/disciplina/{id}")

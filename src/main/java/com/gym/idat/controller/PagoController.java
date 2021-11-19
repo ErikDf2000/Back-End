@@ -20,8 +20,8 @@ public class PagoController {
     private PagoService service;
 
 	 @PostMapping
-	    public Pago addPago(@RequestBody Pago disciplinas) {
-	        return service.save(disciplinas);
+	    public Pago addPago(@RequestBody Pago pago) {
+	        return service.save(pago);
 	    }
 
 	   @GetMapping

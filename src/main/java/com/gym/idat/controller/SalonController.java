@@ -17,7 +17,7 @@ public class SalonController {
 	private SalonService service;
 	
 	@PostMapping
-    public Salon addSalon(@RequestBody Salon disciplinas) {
-        return service.save(disciplinas);
+    public Salon addSalon(@RequestBody Salon salon) {
+        return service.save(salon);
     }
 }

@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gym.idat.model.Clase;
 import com.gym.idat.model.Disciplinas;
 import com.gym.idat.repository.DisciplinaRepository;
 

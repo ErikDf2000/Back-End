@@ -1,6 +1,5 @@
 package com.gym.idat.model;
 
-import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
