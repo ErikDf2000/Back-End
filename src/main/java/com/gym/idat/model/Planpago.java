@@ -21,7 +21,6 @@ public class Planpago {
 	private Long id;
 	private String nombre;
 	private boolean estado;
-	
 	private LocalDate inicio;
 	private LocalDate finn ;
 	

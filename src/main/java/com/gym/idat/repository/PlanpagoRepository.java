@@ -6,4 +6,6 @@ import com.gym.idat.model.Planpago;
 
 public interface PlanpagoRepository extends JpaRepository<Planpago, Long> {
 
+	
+	public Planpago findPlanpagoById(Long id);
 }
