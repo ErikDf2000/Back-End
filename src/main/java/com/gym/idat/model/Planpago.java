@@ -1,6 +1,6 @@
 package com.gym.idat.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,23 +11,28 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "planpago")
 public class Planpago {
-	
+
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
 	private String nombre;
-	private boolean estado;
-	
 	private LocalDate inicio;
 	private LocalDate finn ;
-	
+
 	@JsonIgnore
 	@OneToMany(mappedBy="planpago") //referencia FK a nivel de entidades
 	private Collection<Reserva> reserva=new ArrayList<>();
+	private boolean estado;
+
+	}
 	
 	/* @OneToOne(mappedBy="planpago")
 	   private Cliente cliente;*/
@@ -35,4 +40,3 @@ public class Planpago {
 	//private List<Pago> pago;
 	
 	
-}
