@@ -14,7 +14,6 @@ import com.gym.idat.Utils.other.ReservaDTO;
 import com.gym.idat.model.Cliente;
 import com.gym.idat.model.Planpago;
 import com.gym.idat.model.Reserva;
-import com.gym.idat.model.Salon;
 import com.gym.idat.repository.ClienteRepository;
 import com.gym.idat.repository.PlanpagoRepository;
 import com.gym.idat.repository.ReservaRepository;

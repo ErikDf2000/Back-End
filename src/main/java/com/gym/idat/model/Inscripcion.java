@@ -16,7 +16,6 @@ public class Inscripcion {
 	
 	private boolean estado;
 	
-	private Long idcliente;
 	
 	@ManyToOne
 	private Planpago planpago;
