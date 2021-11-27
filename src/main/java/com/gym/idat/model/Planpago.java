@@ -23,6 +23,7 @@ public class Planpago {
 	private boolean estado;
 	private LocalDate inicio;
 	private LocalDate finn ;
+	  
 	
 	@JsonIgnore
 	@OneToMany(mappedBy="planpago") //referencia FK a nivel de entidades

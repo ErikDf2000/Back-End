@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gym.idat.model.Disciplinas;
 import com.gym.idat.model.Inscripcion;
 import com.gym.idat.services.InscripcionService;
 
@@ -25,9 +26,15 @@ public class InscripcionController {
 	    public List<Inscripcion> lista(){
 	        return service.listado();
 	    }
-	
+/*	
 	    @PostMapping
 	    public String agregar(@RequestBody Inscripcion inscripcion){
 	        return service.save(inscripcion);
 	    }
+*/
+	    @PostMapping
+	    public Inscripcion addInscripcion(@RequestBody Inscripcion inscripcion) {
+	        return service.save(inscripcion);
+	    }
+
 }
