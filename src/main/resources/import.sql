@@ -54,4 +54,16 @@ insert into rol values (null,'EMPLEADO');
 insert into rol values (null,'ADMIN');
 insert into rol values (null,'CLIENTE');
 
+---ADMIN
+insert into admin values (null, 'Paul Lorem', 'Rojas Castillo');
+insert into admin values (null, 'Lorenzo Deam', 'Ambrose Leiya');
+---ADMIN usuario
+INSERT INTO usuario VALUES (null, 'admin001', 'admin01', 1, NULL, 2);
+INSERT INTO usuario VALUES (null, 'admin002', 'admin02', 2, NULL, 2);
+
+
+---Cliente usuario
+INSERT INTO `usuario` VALUES (null, '12345678', 'Gloria', NULL, 1, 3);
+INSERT INTO `usuario` VALUES (null, '123456789', 'Hugo', NULL, 2, 3);
+
 
