@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gym.idat.model.Planpago;
+
 import com.gym.idat.model.Salon;
 import com.gym.idat.services.SalonService;
 

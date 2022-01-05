@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gym.idat.model.Planpago;
+
 import com.gym.idat.model.Salon;
 import com.gym.idat.repository.SalonRepository;
 
