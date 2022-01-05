@@ -25,4 +25,5 @@ public class SalonService {
 	 public List<Salon> listado() {
 		    return repository.findAll();
 		}
+	 
 }
