@@ -32,7 +32,9 @@ public Planpago updatePlanpago(Planpago planpago) {
     existingPlanpago.setInicio(planpago.getInicio());
     existingPlanpago.setFinn(planpago.getFinn());
     existingPlanpago.setEstado(planpago.isEstado());
-    return repository.save(existingPlanpago);
+    existingPlanpago.setCosto(planpago.getCosto());
+    existingPlanpago.setDisciplinas(planpago.getDisciplinas());
+       return repository.save(existingPlanpago);
 }
 
 }
