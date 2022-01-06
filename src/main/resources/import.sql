@@ -44,8 +44,8 @@ INSERT INTO cliente (id, apellido, celular, correo, nombre, sexo) VALUES (1, 'Pa
 INSERT INTO cliente (id, apellido, celular, correo, nombre, sexo) VALUES (2, 'Cabrera', 987456525, 'Hugo@gmail.com', 'Hugo', 'Masculino');
 
 --- `planpago`
-INSERT INTO planpago (id, estado, finn, inicio, nombre) VALUES (1, b'1', '2021-11-27', '2021-11-27', 'Plan Gold');
-INSERT INTO planpago (id, estado, finn, inicio, nombre) VALUES (2, b'1', '2021-11-27', '2021-11-27', 'Plan Plata');
+INSERT INTO planpago (id, costo, disciplinas, estado, finn, inicio, nombre) VALUES (1,150, 2, b'1', '2021-11-27', '2021-11-27', 'Plan Gold');
+INSERT INTO planpago (id,costo, disciplinas, estado, finn, inicio, nombre) VALUES (2,200, 2, b'1', '2021-11-27', '2021-11-27', 'Plan Plata');
 
 INSERT INTO pago (id, descripcion, estado, fecha_pago, mensualidad_id, planpago_id) VALUES (1, 'pago del mes', 1, '2021-11-27', 11, 1);
 
