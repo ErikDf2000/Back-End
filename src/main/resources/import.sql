@@ -40,8 +40,8 @@ INSERT INTO disciplinas_de_trainers (id_disciplina,id_trainer) VALUES (4,3);
 
 
 ---`cliente`
-INSERT INTO cliente (id, apellido, celular, correo, nombre, sexo) VALUES (1, 'Palacios', 987456525, 'Gloria@gmail.com', 'Gloria', 'Femenino');
-INSERT INTO cliente (id, apellido, celular, correo, nombre, sexo) VALUES (2, 'Cabrera', 987456525, 'Hugo@gmail.com', 'Hugo', 'Masculino');
+INSERT INTO cliente (id, apellido, celular, correo,foto, nombre, sexo) VALUES (1, 'Palacios', 987456525, 'Gloria@gmail.com',NULL, 'Gloria', 'Femenino');
+INSERT INTO cliente (id, apellido, celular, correo,foto, nombre, sexo) VALUES (2, 'Cabrera', 987456525, 'Hugo@gmail.com',NULL, 'Hugo', 'Masculino');
 
 --- `planpago`
 INSERT INTO planpago (id, costo, disciplinas, estado, finn, inicio, nombre) VALUES (1,150, 2, b'1', '2021-11-27', '2021-11-27', 'Plan Gold');
