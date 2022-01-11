@@ -13,7 +13,7 @@ import com.gym.idat.Utils.other.InscripcionDTO;
 import com.gym.idat.model.Inscripcion;
 import com.gym.idat.services.InscripcionService;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/inscripcion")
