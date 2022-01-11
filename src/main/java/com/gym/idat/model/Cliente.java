@@ -33,6 +33,8 @@ public class Cliente  {
 	private Long celular;
 	
     private String correo;
+
+	private String foto;
     
     
     /*@ManyToOne

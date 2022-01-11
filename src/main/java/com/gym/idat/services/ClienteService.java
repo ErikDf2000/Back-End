@@ -52,6 +52,8 @@ public class ClienteService {
 	        existingCliente.setSexo(cliente.getSexo());
 	        existingCliente.setCelular(cliente.getCelular());
 	        existingCliente.setCorreo(cliente.getCorreo());
+
+	        existingCliente.setFoto(cliente.getFoto());
 	        return repository.save(existingCliente);
 	    }
 
