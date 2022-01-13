@@ -34,7 +34,6 @@ public class ReservaController {
     
     
     
-    
     @GetMapping("/filtroCliente")
     public ResponseEntity<?> FiltroCliente(@RequestParam String dato){
     	List<Reserva> find = service.FiltroReserva(dato, dato);
