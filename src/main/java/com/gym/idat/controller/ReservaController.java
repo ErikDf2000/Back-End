@@ -22,6 +22,7 @@ public class ReservaController {
 
     }
 
+    
     @PostMapping
     public ResponseEntity<?> Registrar(@RequestBody ReservaDTO reservaDTO) {
         return service.RegistrarReserva(reservaDTO);
