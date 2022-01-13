@@ -6,6 +6,7 @@ import com.gym.idat.services.PlanpagoService;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,17 +17,18 @@ public class PlanpagoController {
     private PlanpagoService service;
 
 
+	@Transactional(readOnly=true)
     @GetMapping
     public List<Planpago> listado(){
       return service.listado();
     }
 
-    @PostMapping
+    @PostMapping("/registrar")
     public String save(@RequestBody Planpago planpago){
         return service.save(planpago);
     }
 
-    @PutMapping
+    @PutMapping("/editar")
     public Planpago updatePlanpago(@RequestBody Planpago planpago) {
     	return service.updatePlanpago(planpago);
     	
