@@ -12,7 +12,8 @@ import com.gym.idat.model.Cliente;
 public interface ClienteRepository extends JpaRepository<Cliente, Long>{
 
 	List<Cliente> findByNombreContainsOrApellidoContains(String n, String a);
-    Cliente findByNombre(String nombre);
+	
+    Cliente findByNombreContains(String nombre);
     
     public  Cliente findClienteById(Long id);
 }

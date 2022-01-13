@@ -18,6 +18,7 @@ import com.gym.idat.repository.ClienteRepository;
 import com.gym.idat.repository.PlanpagoRepository;
 import com.gym.idat.repository.ReservaRepository;
 
+
 @Service
 public class ReservaService {
 
@@ -67,4 +68,20 @@ public class ReservaService {
 	        respon.put("Message", "Realizado exitosamente");
 	        return new ResponseEntity<>(respon, HttpStatus.OK);
 	    }
+	    
+	    
+	    
+	    public List<Reserva> FiltroReserva(String n, String a){
+	    	 return repository.findAllByClienteNombreContainsOrClienteApellidoContains(n, a);
+	    	 
+	    	//List<Reserva> list = repository.findAllByClienteNombreContainsOrClienteApellidoContains( n,a);
+	        //if(list.isEmpty()) throw new BadRequest ("Aún no tiene reservas pendientes.");
+	        //return list;
+	    }
+	    
+	    public List<Reserva> findReservaForIdCliente(Long id){
+	        List<Reserva> reserva = repository.findAllByClienteId(id);
+	        return reserva;
+	    }
+	    
 }
