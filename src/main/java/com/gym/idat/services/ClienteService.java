@@ -34,10 +34,6 @@ public class ClienteService {
 	    public Cliente getClienteById(Long id) {
 	        return repository.findById(id).orElse(null);
 	    }
-
-	    public Cliente getClienteByNombre(String nombre) {
-	        return repository.findByNombre(nombre);
-	    }
 	    
 	    public List<Cliente> findByNombreOrApellido(String n, String a){
 	        return repository.findByNombreContainsOrApellidoContains(n, a);
