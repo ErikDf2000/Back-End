@@ -20,7 +20,7 @@ public class Planpago {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nombre;
-	private boolean estado;
+	private String estado;
 	private LocalDate inicio;
 	private LocalDate finn ;
 	private Long costo;

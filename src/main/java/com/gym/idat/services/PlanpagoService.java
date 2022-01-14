@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.gym.idat.model.Planpago;
 import com.gym.idat.repository.PlanpagoRepository;
 
+
 @Service
 public class PlanpagoService {
 	
@@ -15,6 +16,8 @@ public class PlanpagoService {
     private PlanpagoRepository repository;
 
 public String save(Planpago  planpago) {
+	
+	planpago.setEstado("True");
     repository.save(planpago);
     return "Registro Exitoso";
 }
@@ -31,7 +34,7 @@ public Planpago updatePlanpago(Planpago planpago) {
     Planpago existingPlanpago = repository.findById(planpago.getId()).orElse(null);
     existingPlanpago.setInicio(planpago.getInicio());
     existingPlanpago.setFinn(planpago.getFinn());
-    existingPlanpago.setEstado(planpago.isEstado());
+    existingPlanpago.setEstado(planpago.getEstado());
     existingPlanpago.setCosto(planpago.getCosto());
     existingPlanpago.setDisciplinas(planpago.getDisciplinas());
        return repository.save(existingPlanpago);

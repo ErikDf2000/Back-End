@@ -14,6 +14,5 @@ public interface ReservaRepository extends JpaRepository<Reserva, Long>{
 	
 	public List<Reserva> findAllByClienteNombreContainsOrClienteApellidoContains(String n,String a);
 	public List<Reserva> findAllByClienteId(Long id);
-	
 }
 

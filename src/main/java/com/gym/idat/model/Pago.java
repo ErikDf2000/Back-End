@@ -16,8 +16,8 @@ public class Pago {
     private LocalDate fechaPago;
     private String descripcion;
 
-    @Column(columnDefinition = "boolean default false")
-    private Boolean estado ;
+    @Column
+    private String estado ;
 
     @ManyToOne
     private Mensualidad mensualidad;

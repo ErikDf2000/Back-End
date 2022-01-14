@@ -16,6 +16,7 @@ public class PagoService {
     private PagoRepository repository;
 
     public Pago save(Pago pago) {
+    	pago.setEstado("Pendiente");
         return repository.save(pago);
     }
 

@@ -6,5 +6,5 @@ import lombok.Data;
 public class PagoDTO {
     private Long cliente;
     private Long planpago;
-	private boolean estado;
+    private String estado;
 }
