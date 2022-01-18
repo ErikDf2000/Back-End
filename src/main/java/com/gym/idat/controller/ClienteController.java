@@ -26,9 +26,9 @@ public class ClienteController {
 	    private ClienteService service;
 
 	    @PostMapping
-	    public ResponseEntity<?> agregar(@RequestBody Cliente cliente) {
+	    public Cliente agregar(@RequestBody Cliente cliente) {
 
-			return ResponseEntity.status(HttpStatus.CREATED).body( service.save(cliente));
+			return  service.save(cliente);
 	    }
 
 	  

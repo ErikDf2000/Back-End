@@ -25,14 +25,14 @@ public class ClienteService {
 
 	 
 
-	public String save(Cliente cliente) {
-
-
-	        repository.save(cliente);
+	public Cliente save(Cliente cliente) {
 
 
 
-		return "Alumno \""+cliente.getNombre() +"\" creado.";
+
+
+
+		return  repository.save(cliente);
 	    }
 
 
