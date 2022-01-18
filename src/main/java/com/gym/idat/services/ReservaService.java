@@ -32,12 +32,17 @@ public class ReservaService {
 	    @Autowired
 	    private PlanpagoRepository repositoryplan;
 
-	    public List<Reserva> listado() {
-	        return repository.findAll();
-	    }
+		public List<Reserva> listado() {
+		return repository.findAll();
+	}
 
-	    
-	    public ResponseEntity<?> updateReserva(ReservaDTO reservaDTO) {
+
+	public List<Reserva> fidnByIDCliente(Long id) {
+		return repository.findAllByClienteId(id);
+	}
+
+
+	public ResponseEntity<?> updateReserva(ReservaDTO reservaDTO) {
 	        Map<String, Object> respon = new HashMap<>();
 	        Cliente cliente = repositorycli.findClienteById(reservaDTO.getCliente());
 	        Planpago planpago = repositoryplan.findPlanpagoById(reservaDTO.getPlanpago());

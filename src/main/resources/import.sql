@@ -45,7 +45,7 @@ INSERT INTO disciplinas_de_trainers (id_disciplina,id_trainer) VALUES (4,3);
 INSERT INTO cliente (id, apellido, celular, correo,foto, nombre, sexo) VALUES (1, 'Palacios', 987456525, 'Gloria@gmail.com',NULL, 'Gloria', 'Femenino');
 INSERT INTO cliente (id, apellido, celular, correo,foto, nombre, sexo) VALUES (2, 'Cabrera', 987456525, 'Hugo@gmail.com',NULL, 'Hugo', 'Masculino');
 
----PAGO---
+
 
 
 --- `planpago`
@@ -54,7 +54,27 @@ INSERT INTO planpago (id, costo, disciplinas, estado, finn, inicio, nombre) VALU
 INSERT INTO planpago (id, costo, disciplinas, estado, finn, inicio, nombre) VALUES (3,250, 3, 'True', '2021-2-15', '2021-1-15', 'Plan Diamond');
 
 
-INSERT INTO pago (id, descripcion, estado, fecha_pago, mensualidad_id, planpago_id) VALUES (1, 'pago del mes', 'True', '2021-11-27', 11, 1);
+---RESERVA---
+insert into reserva (id, cliente_id , fecha ,estado ,planpago_id ) values (null, 1 , '2022-01-14', true , 1);
+insert into reserva (id, cliente_id , fecha ,estado ,planpago_id ) values (null, 2 , '2022-01-14', true , 3);
+
+
+---PAGO---
+
+INSERT INTO pago VALUES (null, 'pago completado', false, '2021-11-27', 1, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado2', false, '2021-11-27', 2, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado II', false, '2021-11-27', 3, 1 );
+INSERT INTO pago VALUES (null, 'pago completado IV', false, '2021-11-27', 4, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado V', false, '2021-11-27',5, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado VI', false, '2021-11-27', 6, 1 );
+INSERT INTO pago VALUES (null, 'pago completado VII', false, '2021-11-27', 7, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado', false, '2021-11-27', 8, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado', false, '2021-11-27', 9, 1 );
+INSERT INTO pago VALUES (null, 'pago completado', false, '2021-11-27', 10, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado', false, '2021-11-27', 11, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado', false, '2021-11-27', 12, 1 );
+
+
 
 ---ROL
 insert into rol values (null,'EMPLEADO');

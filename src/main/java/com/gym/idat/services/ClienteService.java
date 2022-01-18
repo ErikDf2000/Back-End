@@ -2,6 +2,11 @@ package com.gym.idat.services;
 
 import java.util.List;
 
+import com.gym.idat.model.Mensualidad;
+import com.gym.idat.model.Pago;
+import com.gym.idat.model.Reserva;
+import com.gym.idat.repository.PagoRepository;
+import com.gym.idat.repository.ReservaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,18 +19,38 @@ public class ClienteService {
 	
 	 @Autowired
 	    private ClienteRepository repository;
-	 	 
 
-		
+	@Autowired
+	private MensualidadService serviceMensualidad;
+
+	@Autowired
+	private ReservaRepository reservaRepository;
+
+	@Autowired
+	private PagoService pagoService;
+
 	 
-	 	public Cliente save(Cliente cliente) {
-	        return repository.save(cliente);
+
+	public String save(Cliente cliente) {
+
+
+	        repository.save(cliente);
+
+			List<Mensualidad> mensualidades = serviceMensualidad.getAll();
+
+			Reserva reserva = reservaRepository.findReservaById(cliente.getId());
+
+			for (Mensualidad mensualidad : mensualidades){
+				Pago mensualidadPago = new Pago();
+				mensualidadPago.setMensualidad(mensualidad);
+				mensualidadPago.setReserva(reserva);
+				pagoService.save(mensualidadPago);
+			}
+
+		return "Alumno \""+cliente.getNombre() +"\" creado.";
 	    }
 
-	 	/*grabar una lista--? probar--
-	    public List<Cliente> save(List<Cliente> cliente) {
-	        return repository.saveAll(cliente);
-	    }*/
+
 
 	    public List<Cliente> getClientes() {
 	        return repository.findAll();
