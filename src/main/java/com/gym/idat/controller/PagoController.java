@@ -3,6 +3,8 @@ package com.gym.idat.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.gym.idat.model.Pago;
@@ -30,5 +32,10 @@ public class PagoController {
 	@GetMapping("/{idClient}")
 	public List<Pago> findAllPagoCliente(@PathVariable  Long idClient) {
 		return service.getPagoByIdCliente(idClient);
+	}
+
+	@PatchMapping("/{id}")
+	public ResponseEntity<?> RealizarPago(@PathVariable  Long id) {
+		return ResponseEntity.status(HttpStatus.CREATED).body( service.RealizarPago(id));
 	}
 }

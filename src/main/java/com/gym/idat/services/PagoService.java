@@ -1,11 +1,16 @@
 package com.gym.idat.services;
 
 import com.gym.idat.model.Pago;
+import com.gym.idat.model.Reserva;
 import com.gym.idat.repository.PagoRepository;
+import org.apache.tomcat.jni.Local;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -33,6 +38,17 @@ public class PagoService {
     }
 
 
+    public String RealizarPago(Long id){
+
+
+
+        Pago newPago =   this.getPagoById(id);
+        newPago.setEstado("Pagado");
+
+
+        return "Pago Realizado";
+
+    }
 
 
 }

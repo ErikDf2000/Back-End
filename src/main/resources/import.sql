@@ -61,18 +61,18 @@ insert into reserva (id, cliente_id , fecha ,estado ,planpago_id ) values (null,
 
 ---PAGO---
 
-INSERT INTO pago VALUES (null, 'pago completado', false, '2021-11-27', 1, 1 );
-INSERT INTO pago  VALUES (null, 'pago completado2', false, '2021-11-27', 2, 1 );
-INSERT INTO pago  VALUES (null, 'pago completado II', false, '2021-11-27', 3, 1 );
-INSERT INTO pago VALUES (null, 'pago completado IV', false, '2021-11-27', 4, 1 );
-INSERT INTO pago  VALUES (null, 'pago completado V', false, '2021-11-27',5, 1 );
-INSERT INTO pago  VALUES (null, 'pago completado VI', false, '2021-11-27', 6, 1 );
-INSERT INTO pago VALUES (null, 'pago completado VII', false, '2021-11-27', 7, 1 );
-INSERT INTO pago  VALUES (null, 'pago completado', false, '2021-11-27', 8, 1 );
-INSERT INTO pago  VALUES (null, 'pago completado', false, '2021-11-27', 9, 1 );
-INSERT INTO pago VALUES (null, 'pago completado', false, '2021-11-27', 10, 1 );
-INSERT INTO pago  VALUES (null, 'pago completado', false, '2021-11-27', 11, 1 );
-INSERT INTO pago  VALUES (null, 'pago completado', false, '2021-11-27', 12, 1 );
+INSERT INTO pago VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 1, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado2', 'Pendiente', '2021-11-27', 2, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado II', 'Pendiente', '2021-11-27', 3, 1 );
+INSERT INTO pago VALUES (null, 'pago completado IV', 'Pendiente', '2021-11-27', 4, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado V', 'Pendiente', '2021-11-27',5, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado VI', 'Pendiente', '2021-11-27', 6, 1 );
+INSERT INTO pago VALUES (null, 'pago completado VII', 'Pendiente', '2021-11-27', 7, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 8, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 9, 1 );
+INSERT INTO pago VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 10, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 11, 1 );
+INSERT INTO pago  VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 12, 1 );
 
 
 
