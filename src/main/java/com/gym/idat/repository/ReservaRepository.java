@@ -10,9 +10,9 @@ import com.gym.idat.model.Reserva;
 
 public interface ReservaRepository extends JpaRepository<Reserva, Long>{
 	
-	public  Reserva  findReservaById ( Long  id );
+	public Reserva  findReservaById (Long  id );
 	
 	public List<Reserva> findAllByClienteNombreContainsOrClienteApellidoContains(String n,String a);
-	public List<Reserva> findAllByClienteId(Long id);
+	public Reserva findAllByClienteId(Long id);
 }
 

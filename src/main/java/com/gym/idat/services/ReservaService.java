@@ -5,15 +5,13 @@ import java.util.List;
 import java.util.Map;
 
 
+import com.gym.idat.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.gym.idat.Utils.other.ReservaDTO;
-import com.gym.idat.model.Cliente;
-import com.gym.idat.model.Planpago;
-import com.gym.idat.model.Reserva;
 import com.gym.idat.repository.ClienteRepository;
 import com.gym.idat.repository.PlanpagoRepository;
 import com.gym.idat.repository.ReservaRepository;
@@ -32,12 +30,18 @@ public class ReservaService {
 	    @Autowired
 	    private PlanpagoRepository repositoryplan;
 
+		@Autowired
+		private MensualidadService serviceMensualidad;
+
+		@Autowired
+		private PagoService pagoService;
+
 		public List<Reserva> listado() {
 		return repository.findAll();
 	}
 
 
-	public List<Reserva> fidnByIDCliente(Long id) {
+	public Reserva fidnByIDCliente(Long id) {
 		return repository.findAllByClienteId(id);
 	}
 
@@ -71,6 +75,29 @@ public class ReservaService {
 	        reserva.setFecha(reservaDTO.getFecha());
 	        reserva.setEstado(reservaDTO.getEstado());
 	        repository.save(reserva);
+
+
+			List<Mensualidad> mensualidades = serviceMensualidad.getAll();
+
+
+
+
+			for (Mensualidad mensualidad : mensualidades){
+				Pago mensualidadPago = new Pago();
+				mensualidadPago.setMensualidad(mensualidad);
+				mensualidadPago.setReserva(reserva);
+				pagoService.save(mensualidadPago);
+			}
+
+
+
+
+
+
+
+
+
+
 	        respon.put("Message", "Realizado exitosamente");
 	        return new ResponseEntity<>(respon, HttpStatus.OK);
 	    }
@@ -85,9 +112,6 @@ public class ReservaService {
 	        //return list;
 	    }
 	    
-	    public List<Reserva> findReservaForIdCliente(Long id){
-	        List<Reserva> reserva = repository.findAllByClienteId(id);
-	        return reserva;
-	    }
+
 	    
 }

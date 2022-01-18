@@ -28,14 +28,9 @@ public class PagoService {
         return repository.findById(id).orElse(null);
     }
 
-    /*public List<Pago> getPagosByIdAlumno(int id){
-        return repository.findByPlan_id(id);
-    }*/
-
-    /*public List<Pago> custom(int  id , LocalDate mes ){
-        return repository.findByEstadoAndplanIdAndMensualidad_FechaFinalBefore( false , id , mes  );
-    }*/
-
+    public List<Pago> getPagoByIdCliente(Long id) {
+        return repository.findByReservaCliente_Id(id);
+    }
 
 
 

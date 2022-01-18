@@ -3,11 +3,7 @@ package com.gym.idat.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.gym.idat.model.Pago;
 import com.gym.idat.services.PagoService;
@@ -19,13 +15,20 @@ public class PagoController {
 	@Autowired
     private PagoService service;
 
+
 	 @PostMapping
-	    public Pago addPago(@RequestBody Pago pago) {
+	 public Pago addPago(@RequestBody Pago pago) {
 	        return service.save(pago);
 	    }
 
-	   @GetMapping
-	    public List<Pago> findAllPago() {
+	@GetMapping
+	public List<Pago> findAllPago() {
 	        return service.getPago();
 	    }
+
+
+	@GetMapping("/{idClient}")
+	public List<Pago> findAllPagoCliente(@PathVariable  Long idClient) {
+		return service.getPagoByIdCliente(idClient);
+	}
 }

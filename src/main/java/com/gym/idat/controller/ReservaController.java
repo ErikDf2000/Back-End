@@ -43,8 +43,8 @@ public class ReservaController {
     }
     
     @Transactional(readOnly=true)
-    @GetMapping("/buscarReservaBy/{id}")
+    @GetMapping("/buscarReservaByCliente/{id}")
     public ResponseEntity<?> SearchReservaByClienteId(@PathVariable Long id){
-        return ResponseEntity.status(HttpStatus.OK).body(service.findReservaForIdCliente(id));
+        return ResponseEntity.status(HttpStatus.OK).body(service.fidnByIDCliente(id));
     }
 }

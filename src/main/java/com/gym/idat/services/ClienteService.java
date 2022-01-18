@@ -2,6 +2,7 @@ package com.gym.idat.services;
 
 import java.util.List;
 
+import com.gym.idat.Utils.other.ReservaDTO;
 import com.gym.idat.model.Mensualidad;
 import com.gym.idat.model.Pago;
 import com.gym.idat.model.Reserva;
@@ -20,14 +21,7 @@ public class ClienteService {
 	 @Autowired
 	    private ClienteRepository repository;
 
-	@Autowired
-	private MensualidadService serviceMensualidad;
 
-	@Autowired
-	private ReservaRepository reservaRepository;
-
-	@Autowired
-	private PagoService pagoService;
 
 	 
 
@@ -36,16 +30,7 @@ public class ClienteService {
 
 	        repository.save(cliente);
 
-			List<Mensualidad> mensualidades = serviceMensualidad.getAll();
 
-			Reserva reserva = reservaRepository.findReservaById(cliente.getId());
-
-			for (Mensualidad mensualidad : mensualidades){
-				Pago mensualidadPago = new Pago();
-				mensualidadPago.setMensualidad(mensualidad);
-				mensualidadPago.setReserva(reserva);
-				pagoService.save(mensualidadPago);
-			}
 
 		return "Alumno \""+cliente.getNombre() +"\" creado.";
 	    }
