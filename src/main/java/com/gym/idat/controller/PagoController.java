@@ -34,7 +34,7 @@ public class PagoController {
 		return service.getPagoByIdCliente(idClient);
 	}
 
-	@PatchMapping("/{id}")
+	@PutMapping("/{id}")
 	public ResponseEntity<?> RealizarPago(@PathVariable  Long id) {
 		return ResponseEntity.status(HttpStatus.CREATED).body( service.RealizarPago(id));
 	}
