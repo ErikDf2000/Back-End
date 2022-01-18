@@ -12,10 +12,10 @@ import org.springframework.stereotype.Service;
 import com.gym.idat.Utils.other.InscripcionDTO;
 import com.gym.idat.model.Clase;
 import com.gym.idat.model.Inscripcion;
-import com.gym.idat.model.Planpago;
+import com.gym.idat.model.Reserva;
 import com.gym.idat.repository.ClaseRepository;
 import com.gym.idat.repository.InscripcionRepository;
-import com.gym.idat.repository.PlanpagoRepository;
+import com.gym.idat.repository.ReservaRepository;
 
 @Service
 public class InscripcionService {
@@ -23,7 +23,7 @@ public class InscripcionService {
 	 @Autowired
 	    private InscripcionRepository repository;
 	 @Autowired
-	    private PlanpagoRepository repositoryplan;
+	    private ReservaRepository repositoryres;
 	 @Autowired
 	    private ClaseRepository repositoryclas;
 	
@@ -42,12 +42,12 @@ public class InscripcionService {
 	    }*/
 	    public ResponseEntity<?> RealizarInscripcion(InscripcionDTO dto){
 	        Clase clase = repositoryclas.findClaseById(dto.getClase());
-	        Planpago plan = repositoryplan.findPlanpagoById(dto.getPlanpago());
+	        Reserva reserva = repositoryres.findReservaById(dto.getReserva());
 	        Map<String, Object> respon = new HashMap<>();
 
 	        Inscripcion inscri = new Inscripcion();
 	        inscri.setClase(clase);
-	        inscri.setPlanpago(plan);
+	        inscri.setReserva(reserva);
 	        inscri.setEstado(dto.getEstado());
 	        repository.save(inscri);
 

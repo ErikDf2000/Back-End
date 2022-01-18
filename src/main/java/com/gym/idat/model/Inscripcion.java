@@ -14,11 +14,11 @@ public class Inscripcion {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private boolean estado;
+	private String estado;
 	
 	
 	@ManyToOne
-	private Planpago planpago;
+	private Reserva reserva;
 	
 	@ManyToOne
 	private Clase clase;

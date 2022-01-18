@@ -26,7 +26,7 @@ public class Pago {
 	
 
     @ManyToOne
-	private Planpago planpago;
+	private Reserva reserva;
 //    @PrePersist
 //    void Prepersit() {
 //        estado = false;

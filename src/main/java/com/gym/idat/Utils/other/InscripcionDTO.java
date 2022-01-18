@@ -8,7 +8,7 @@ public class InscripcionDTO {
 	private Long id;
 	
 	
-	 private Long planpago;
+	 private Long reserva;
 	 private Long clase;
-	 private Boolean Estado;
+	 private String Estado;
 }

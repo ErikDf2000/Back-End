@@ -26,12 +26,12 @@ public class Planpago {
 	private Long costo;
 	private Long disciplinas;
 	  
-	
+	/*
 	@JsonIgnore
 	@OneToMany(mappedBy="planpago") //referencia FK a nivel de entidades
 	private Collection<Reserva> reserva=new ArrayList<>();
 	
-	/*@OneToOne(mappedBy="planpago")
+	@OneToOne(mappedBy="planpago")
 	   private Cliente cliente;*/
 	//@OneToMany//(cascade = CascadeType.ALL,mappedBy = "planpago")
 	//private List<Pago> pago;
