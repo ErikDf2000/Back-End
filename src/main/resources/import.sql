@@ -74,6 +74,19 @@ INSERT INTO pago VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 10,
 INSERT INTO pago  VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 11, 1 );
 INSERT INTO pago  VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 12, 1 );
 
+INSERT INTO pago VALUES (null, '', 'Pendiente', '2021-11-27', 1, 1 );
+INSERT INTO pago  VALUES (null, '', 'Pendiente', '2021-11-27', 2, 1 );
+INSERT INTO pago  VALUES (null, '', 'Pendiente', '2021-11-27', 3, 1 );
+INSERT INTO pago VALUES (null, '', 'Pendiente', '2021-11-27', 4, 1 );
+INSERT INTO pago  VALUES (null, '', 'Pendiente', '2021-11-27',5, 1 );
+INSERT INTO pago  VALUES (null, '  ', 'Pendiente', '2021-11-27', 6, 1 );
+INSERT INTO pago VALUES (null, '  ', 'Pendiente', '2021-11-27', 7, 1 );
+INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-11-27', 8, 1 );
+INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-11-27', 9, 1 );
+INSERT INTO pago VALUES (null, ' ', 'Pendiente', '2021-11-27', 10, 1 );
+INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-11-27', 11, 1 );
+INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-11-27', 12, 1 );
+
 
 
 ---ROL
