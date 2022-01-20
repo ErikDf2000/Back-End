@@ -1,5 +1,6 @@
 package com.gym.idat.services;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,18 +29,11 @@ public class InscripcionService {
 	    private ClaseRepository repositoryclas;
 	
 	 
-	 public List<Inscripcion> listado(){
+	 	public List<Inscripcion> listado(){
 	        return repository.findAll();
 	    }
 	
-	    /*public String  save(Inscripcion clase){
-	        repository.save(clase);
-	        return "Registro Exitoso";
-	    }
-	    
-	    public Inscripcion save(Inscripcion inscripcion) {
-	        return repository.save(inscripcion);
-	    }*/
+	   
 	    public ResponseEntity<?> RealizarInscripcion(InscripcionDTO dto){
 	        Clase clase = repositoryclas.findClaseById(dto.getClase());
 	        Reserva reserva = repositoryres.findReservaById(dto.getReserva());
@@ -54,4 +48,9 @@ public class InscripcionService {
 	        respon.put("Message", "Inscrito correctamente");
 	        return new ResponseEntity<>(respon ,HttpStatus.OK);
 	    }
+	    
+	    public List<Inscripcion> listados(Long id, LocalDateTime day,Long ids){
+	        return repository.findByReserva_Cliente_IdAndClase_HoraIniBeforeAndClase_Disciplina_Id(id,day,ids);
+	    }
+	    
 }

@@ -58,6 +58,10 @@ INSERT INTO planpago (id, costo, disciplinas, estado, finn, inicio, nombre) VALU
 insert into reserva (id, cliente_id , fecha ,estado ,planpago_id ) values (null, 1 , '2022-01-14', true , 1);
 insert into reserva (id, cliente_id , fecha ,estado ,planpago_id ) values (null, 2 , '2022-01-14', true , 3);
 
+---CLASE---
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 10, '2022-01-20 02:09:40', '2022-01-20 02:07:52', 1, 3, 1);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 15, '2022-01-21 02:09:00', '2022-01-21 02:07:00', 2, 2, 3);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 13, '2022-01-22 02:09:30', '2022-01-22 02:07:30', 3, 4, 2);
 
 ---PAGO---
 
