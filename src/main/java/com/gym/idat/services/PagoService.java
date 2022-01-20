@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
@@ -50,5 +51,7 @@ public class PagoService {
 
     }
 
-
+    public List<Pago> custom(Long  id , LocalDate mes ){
+        return repository.findByEstadoAndReserva_Cliente_IdAndMensualidad_FechaFinalBefore( "Pendiente" , id , mes  );
+    }
 }

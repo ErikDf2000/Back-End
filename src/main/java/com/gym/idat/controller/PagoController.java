@@ -1,5 +1,9 @@
 package com.gym.idat.controller;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,4 +42,11 @@ public class PagoController {
 	public ResponseEntity<?> RealizarPago(@PathVariable  Long id) {
 		return ResponseEntity.status(HttpStatus.CREATED).body( service.RealizarPago(id));
 	}
+	
+	 
+	@GetMapping("/buscar/{fecha}/{id}")
+	    public List<Pago> lista( @PathVariable Long  id,@PathVariable String fecha){
+		LocalDate day = LocalDate.parse(fecha);
+	        return service.custom(id,day);
+	    }
 }

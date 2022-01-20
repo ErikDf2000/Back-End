@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.gym.idat.model.Pago;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public interface PagoRepository extends JpaRepository<Pago, Long> {
 
     List<Pago> findByReservaCliente_Id(Long id);
 
-    List<Pago> findByEstadoAndReserva_Cliente_IdAndMensualidad_FechaFinalBefore(String estado,Long id , LocalDateTime mes);
+    List<Pago> findByEstadoAndReserva_Cliente_IdAndMensualidad_FechaFinalBefore(String estado,Long id , LocalDate mes);
 
     //List<Pago> findByEstadoAndplanIdAndMensualidad_FechaFinalBefore(Boolean estado , int id , LocalDate mes);
 }
