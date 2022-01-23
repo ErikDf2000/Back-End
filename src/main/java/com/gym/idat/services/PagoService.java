@@ -52,6 +52,6 @@ public class PagoService {
     }
 
     public List<Pago> custom(Long  id , LocalDate mes ){
-        return repository.findByEstadoAndReserva_Cliente_IdAndMensualidad_FechaFinalBefore( "Pendiente" , id , mes  );
+        return repository.findByReserva_Cliente_IdAndMensualidad_FechaFinalBefore(  id , mes  );
     }
 }

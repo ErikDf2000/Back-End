@@ -45,7 +45,7 @@ public class PagoController {
 	
 	 
 	@GetMapping("/buscar/{fecha}/{id}")
-	    public List<Pago> lista( @PathVariable Long  id,@PathVariable String fecha){
+	    public List<Pago> lista( @PathVariable String fecha,@PathVariable Long  id){
 		LocalDate day = LocalDate.parse(fecha);
 	        return service.custom(id,day);
 	    }
