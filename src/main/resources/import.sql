@@ -1,17 +1,17 @@
 ﻿
 --
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-01-31', '2021-01-01', 'Enero', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-02-28', '2021-02-01', 'Febrero', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-03-31', '2021-03-01', 'Marzo', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-04-30', '2021-04-01', 'Abril', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-05-31', '2021-05-01', 'Mayo', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-06-30', '2021-06-01', 'Junio', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-07-31', '2021-07-01', 'Julio', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-08-31', '2021-08-01', 'Agosto', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-09-30', '2021-09-01', 'Septiembre', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-10-31', '2021-10-01', 'Octubre', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-11-30', '2021-11-01', 'Noviembre', '30');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-12-31', '2021-12-01', 'Diciembre', '30');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-01-31', '2022-01-01', 'Enero', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-02-28', '2022-02-01', 'Febrero', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-03-31', '2022-03-01', 'Marzo', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-04-30', '2022-04-01', 'Abril', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-05-31', '2022-05-01', 'Mayo', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-06-30', '2022-06-01', 'Junio', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-07-31', '2022-07-01', 'Julio', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-08-31', '2022-08-01', 'Agosto', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-09-30', '2022-09-01', 'Septiembre', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-10-31', '2022-10-01', 'Octubre', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-11-30', '2022-11-01', 'Noviembre', '35');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2022-12-31', '2022-12-01', 'Diciembre', '35');
 
 
 INSERT INTO disciplinas (id,descripcion,imagen,nombre) VALUES (1,'Ideal para aquellos que ya han disminuido lo suficiente su porcentaje de grasa','https://i.imgur.com/fyp7d3m.jpg', 'core training');
