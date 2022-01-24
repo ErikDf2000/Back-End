@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -84,6 +85,10 @@ public class ClaseService {
     
     public List<Clase> getClasesByIdDisciplina(Long id){
         return repository.findByDisciplina_Id(id);
+    }
+    
+    public List<Clase> listados(LocalDateTime day,Long id){
+        return repository.findByHoraIniBeforeAndDisciplina_Id(day,id);
     }
 
 }

@@ -11,6 +11,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @RestController
@@ -48,5 +52,14 @@ public class ClaseController {
     @GetMapping("/disciplina/{id}")
     public ResponseEntity<?> claseBydisciplina(@PathVariable Long id){
         return ResponseEntity.status(HttpStatus.OK).body(service.getClasesByIdDisciplina(id));
+    }
+    
+    @GetMapping("/buscar/{fecha}/{id}")
+    public List<Clase> lista( @PathVariable String fecha,@PathVariable Long  id){
+    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    	LocalDate ld = LocalDate.parse(fecha, formatter);
+
+    	LocalDateTime day = LocalDateTime.of(ld,LocalTime.of(23,59));
+        return service.listados(day,id);
     }
 }
