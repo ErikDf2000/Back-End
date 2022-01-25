@@ -29,9 +29,10 @@ public class ClienteService {
 
 	 
 
-	public String  save(Cliente cliente) {
+	public Cliente  save(Cliente cliente) {
+		Cliente c = new Cliente();
+		c=repository.save(cliente);
 
-		repository.save(cliente);
 
 		String user = cliente.getApellido();
 		String pass = cliente.getApellido().charAt(0) + cliente.getDni();
@@ -47,7 +48,7 @@ public class ClienteService {
 
 		usuarioService.RegistrarUsuarioCliente(dtoCliente);
 
-	return "Cliente Registrado-" + cliente.getId();
+	return c;
 	    }
 
 
