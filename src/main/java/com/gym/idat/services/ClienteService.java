@@ -47,7 +47,7 @@ public class ClienteService {
 
 		usuarioService.RegistrarUsuarioCliente(dtoCliente);
 
-	return "Cliente Registrado";
+	return "Cliente Registrado-" + cliente.getId();
 	    }
 
 
