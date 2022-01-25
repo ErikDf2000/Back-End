@@ -42,8 +42,8 @@ INSERT INTO disciplinas_de_trainers (id_disciplina,id_trainer) VALUES (4,3);
 
 
 ---`cliente`
-INSERT INTO cliente (id, apellido, celular, correo,foto, nombre, sexo) VALUES (1, 'Palacios', 987456525, 'Gloria@gmail.com',NULL, 'Gloria', 'Femenino');
-INSERT INTO cliente (id, apellido, celular, correo,foto, nombre, sexo) VALUES (2, 'Cabrera', 987456525, 'Hugo@gmail.com',NULL, 'Hugo', 'Masculino');
+INSERT INTO cliente (id, apellido, celular, correo,foto, nombre, sexo,dni) VALUES (1, 'Palacios', 987456525, 'Gloria@gmail.com',NULL, 'Gloria', 'Femenino', '75584477');
+INSERT INTO cliente (id, apellido, celular, correo,foto, nombre, sexo,dni) VALUES (2, 'Cabrera', 987456525, 'Hugo@gmail.com',NULL, 'Hugo', 'Masculino', '68745814');
 
 
 

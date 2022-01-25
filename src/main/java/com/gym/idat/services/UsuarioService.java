@@ -39,34 +39,19 @@ public class UsuarioService {
     }
 
     public Usuario RegistrarUsuarioCliente(UsuarioClienteDTO usuariodto) {
-        if(usuariodto.getUsuario() == null) throw new BadRequest("Ingrese un nombre.");
-        if(usuariodto.getUsuario().isEmpty()) throw new BadRequest("Ingrese un nombre.");
-        Usuario username = repoUsuario.findByUsuario(usuariodto.getUsuario());
-        if(username!=null) throw new BadRequest("El nombre del Cliente ya existe.");
-        usuariodto.setUsuario(usuariodto.getUsuario());
 
-        if(usuariodto.getContrasena() == null) throw new BadRequest("Ingrese una contraseña.");
-        if(usuariodto.getContrasena().isEmpty()) throw new BadRequest("Ingrese una contraseña.");
-        else {
-            if (usuariodto.getContrasena().length() < 8)
-                throw new BadRequest("Ingrese correctamente la constraseña (8 digitos)");
-            Usuario password = repoUsuario.findByContrasena(usuariodto.getContrasena());
-            if (password != null) throw new BadRequest("Contraseña inválida.");
-            usuariodto.setContrasena(usuariodto.getContrasena());
-        }
-        if(usuariodto.getCliente().getId() == 0) throw new BadRequest("Seleccione el valor.");
-        if(usuariodto.getCliente() == null) throw new BadRequest("Seleccione el valor.");
+
         Usuario Cliente = repoUsuario.findByCliente_Id(usuariodto.getCliente().getId());
         if(Cliente!=null) throw new BadRequest("El Cliente ya tiene una cuenta.");
         usuariodto.setCliente(usuariodto.getCliente());
 
-        if(usuariodto.getRol() == null || usuariodto.getRol().getId() == 0){
-            Rol rolcliente = repoRol.findByTipoRol("CLIENTE");
-            usuariodto.setRol(rolcliente);
-        }
+
+
 
       //utils
         Usuario user = MHelpers.modelMapper().map(usuariodto, Usuario.class);
+        Rol rolcliente = repoRol.findByTipoRol("CLIENTE");
+        user.setRol(rolcliente);
         return repoUsuario.save(user);
     }
 

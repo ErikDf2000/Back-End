@@ -35,7 +35,8 @@ public class Cliente  {
     private String correo;
 
 	private String foto;
-    
+
+	private String dni;
     
     /*@ManyToOne
 	private Reserva reserva;
