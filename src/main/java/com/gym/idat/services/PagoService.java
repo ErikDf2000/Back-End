@@ -35,7 +35,7 @@ public class PagoService {
     }
 
     public List<Pago> getPagoByIdCliente(Long id) {
-        return repository.findByReservaCliente_Id(id);
+        return repository.findByReserva_Cliente_Id(id);
     }
 
 

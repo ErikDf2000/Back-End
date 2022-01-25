@@ -13,9 +13,9 @@ import java.util.List;
 public interface PagoRepository extends JpaRepository<Pago, Long> {
    // List<Pago> findByPlan_id(int id);
 
-    List<Pago> findByReservaCliente_Id(Long id);
+    List<Pago> findByReserva_Cliente_Id(Long id);
 
     List<Pago> findByReserva_Cliente_IdAndMensualidad_FechaFinalBefore(Long id , LocalDate mes);
 
-    //List<Pago> findByEstadoAndplanIdAndMensualidad_FechaFinalBefore(Boolean estado , int id , LocalDate mes);
+
 }
