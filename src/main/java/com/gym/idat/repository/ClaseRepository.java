@@ -11,5 +11,5 @@ public interface ClaseRepository extends JpaRepository<Clase, Long> {
 	  List<Clase> findByDisciplina_Id(Long id);
 	public Clase findClaseById(Long id);
    // public Clase findAllById(Long id);
-	List<Clase> findByHoraIniBeforeAndDisciplina_Id(LocalDateTime day,Long id );
+	List<Clase> findByHoraIniBeforeAndHoraFinAfterAndDisciplina_Id(LocalDateTime day,LocalDateTime dey,Long id );
 }
