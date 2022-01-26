@@ -49,8 +49,8 @@ public class InscripcionService {
 	        return new ResponseEntity<>(respon ,HttpStatus.OK);
 	    }
 	    
-	    public List<Inscripcion> listados(Long id, LocalDateTime day,Long ids){
-	        return repository.findByReserva_Cliente_IdAndClase_HoraIniBeforeAndClase_Disciplina_Id(id,day,ids);
+	    public List<Inscripcion> listados(Long id, LocalDateTime day,LocalDateTime dey){
+	        return repository.findByReserva_Cliente_IdAndClase_HoraIniBeforeAndClase_HoraFinAfter(id,day,dey);
 	    }
 	    
 }

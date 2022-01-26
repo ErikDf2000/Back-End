@@ -12,5 +12,5 @@ import com.gym.idat.model.Inscripcion;
 public interface InscripcionRepository extends JpaRepository<Inscripcion, Long>{
 
 	
-	List<Inscripcion> findByReserva_Cliente_IdAndClase_HoraIniBeforeAndClase_Disciplina_Id(Long id,LocalDateTime mes,Long ids);
+	List<Inscripcion> findByReserva_Cliente_IdAndClase_HoraIniBeforeAndClase_HoraFinAfter(Long id,LocalDateTime mes,LocalDateTime mess);
 }

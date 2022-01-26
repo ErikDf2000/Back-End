@@ -42,13 +42,15 @@ public class InscripcionController {
 	        return service.RealizarInscripcion(inscripcionDTO);
 	    }
 
-	    @GetMapping("/buscar/{idc}/{fecha}/{id}")
-	    public List<Inscripcion> lista( @PathVariable Long  idc,@PathVariable String fecha,@PathVariable Long  id){
+	    @GetMapping("/buscar/{idc}/{fecha}")
+	    public List<Inscripcion> lista( @PathVariable Long  idc,@PathVariable String fecha){
 	    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 	    	LocalDate ld = LocalDate.parse(fecha, formatter);
 
 	    	LocalDateTime day = LocalDateTime.of(ld,LocalTime.of(23,59));
-	        return service.listados(idc,day,id);
+	    	LocalDateTime dey = LocalDateTime.of(ld,LocalTime.of(00,00));
+	        
+	    	return service.listados(idc,day,dey);
 	    }
 
 }
