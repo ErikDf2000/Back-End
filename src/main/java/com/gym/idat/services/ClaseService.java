@@ -87,8 +87,8 @@ public class ClaseService {
         return repository.findByDisciplina_Id(id);
     }
     
-    public List<Clase> listados(LocalDateTime day,Long id){
-        return repository.findByHoraIniBeforeAndDisciplina_Id(day,id);
+    public List<Clase> listado(LocalDateTime day,LocalDateTime dey,Long id){
+        return repository.findByHoraIniBeforeAndHoraFinAfterAndDisciplina_Id(day,dey,id);
     }
 
 }

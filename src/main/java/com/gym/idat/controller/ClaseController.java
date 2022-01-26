@@ -55,11 +55,12 @@ public class ClaseController {
     }
     
     @GetMapping("/buscar/{fecha}/{id}")
-    public List<Clase> lista( @PathVariable String fecha,@PathVariable Long  id){
+    public List<Clase> listado( @PathVariable String fecha,@PathVariable Long  id){
     	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     	LocalDate ld = LocalDate.parse(fecha, formatter);
 
     	LocalDateTime day = LocalDateTime.of(ld,LocalTime.of(23,59));
-        return service.listados(day,id);
+    	LocalDateTime dey = LocalDateTime.of(ld,LocalTime.of(00,00));
+        return service.listado(day,dey,id);
     }
 }
