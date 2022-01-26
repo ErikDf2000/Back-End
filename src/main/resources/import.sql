@@ -37,7 +37,7 @@ INSERT INTO trainers (id,altura,apellido,descripcion,dni,fecha_nac,foto,genero,n
 -- UNION
 INSERT INTO disciplinas_de_trainers (id_disciplina,id_trainer) VALUES (2,1);
 INSERT INTO disciplinas_de_trainers (id_disciplina,id_trainer) VALUES (3,2);
-INSERT INTO disciplinas_de_trainers (id_disciplina,id_trainer) VALUES (4,3);
+INSERT INTO disciplinas_de_trainers (id_disciplina,id_trainer) VALUES (1,3);
 
 
 
@@ -59,9 +59,10 @@ insert into reserva (id, cliente_id , fecha ,estado ,planpago_id ) values (null,
 insert into reserva (id, cliente_id , fecha ,estado ,planpago_id ) values (null, 2 , '2022-01-14', true , 3);
 
 ---CLASE---
-INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 10, '2022-01-20 02:09:40', '2022-01-20 02:07:52', 1, 3, 1);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 10, '2022-01-20 02:09:40', '2022-01-20 02:08:00', 1, 3, 1);
 INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 15, '2022-01-21 02:09:00', '2022-01-21 02:07:00', 2, 2, 3);
 INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 13, '2022-01-22 02:09:30', '2022-01-22 02:07:30', 3, 4, 2);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 12, '2022-01-29 02:10:00', '2022-01-29 02:11:00', 1, 2, 2);
 
 ---PAGO---
 
@@ -78,18 +79,18 @@ INSERT INTO pago VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 10,
 INSERT INTO pago  VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 11, 1 );
 INSERT INTO pago  VALUES (null, 'pago completado', 'Pendiente', '2021-11-27', 12, 1 );
 
-INSERT INTO pago VALUES (null, '', 'Pendiente', '2021-11-27', 1, 2 );
-INSERT INTO pago  VALUES (null, '', 'Pendiente', '2021-11-27', 2, 2 );
-INSERT INTO pago  VALUES (null, '', 'Pendiente', '2021-11-27', 3, 2 );
-INSERT INTO pago VALUES (null, '', 'Pendiente', '2021-11-27', 4, 2 );
-INSERT INTO pago  VALUES (null, '', 'Pendiente', '2021-11-27',5, 2 );
-INSERT INTO pago  VALUES (null, '  ', 'Pendiente', '2021-11-27', 6, 2 );
-INSERT INTO pago VALUES (null, '  ', 'Pendiente', '2021-11-27', 7, 2 );
-INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-11-27', 8, 2 );
-INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-11-27', 9, 2 );
+INSERT INTO pago VALUES (null, '', 'Pendiente', '2022-02-27', 1, 2 );
+INSERT INTO pago  VALUES (null, '', 'Pendiente', '2022-03-27', 2, 2 );
+INSERT INTO pago  VALUES (null, '', 'Pendiente', '2022-04-27', 3, 2 );
+INSERT INTO pago VALUES (null, '', 'Pendiente', '2022-05-27', 4, 2 );
+INSERT INTO pago  VALUES (null, '', 'Pendiente', '2022-06-27',5, 2 );
+INSERT INTO pago  VALUES (null, '  ', 'Pendiente', '2022-07-27', 6, 2 );
+INSERT INTO pago VALUES (null, '  ', 'Pendiente', '2021-08-27', 7, 2 );
+INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-09-27', 8, 2 );
+INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-10-27', 9, 2 );
 INSERT INTO pago VALUES (null, ' ', 'Pendiente', '2021-11-27', 10, 2 );
-INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-11-27', 11, 2 );
-INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-11-27', 12, 2 );
+INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-12-27', 11, 2 );
+INSERT INTO pago  VALUES (null, ' ', 'Pendiente', '2021-13-27', 12, 2 );
 
 
 
