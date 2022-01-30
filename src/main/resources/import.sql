@@ -59,15 +59,15 @@ insert into reserva (id, cliente_id , fecha ,estado ,planpago_id ) values (null,
 insert into reserva (id, cliente_id , fecha ,estado ,planpago_id ) values (null, 2 , '2022-01-14', true , 3);
 
 ---CLASE---
-INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 10, '2022-02-01 02:09:40', '2022-01-20 02:08:00', 1, 1, 1);
-INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 10, '2022-02-01 02:11:00', '2022-01-20 02:10:00', 2, 2, 2);
-INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 10, '2022-02-01 02:12:30', '2022-01-20 02:11:00', 3, 3, 3);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 10, '2022-02-01 02:09:40', '2022-02-01 02:08:00', 1, 1, 1);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 10, '2022-02-01 02:11:00', '2022-02-01 02:10:00', 2, 2, 2);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 10, '2022-02-01 02:12:30', '2022-02-01 02:11:00', 3, 3, 3);
 
-INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 15, '2022-02-02 02:09:00', '2022-01-21 02:07:00', 2, 2, 3);
-INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 15, '2022-02-02 02:11:30', '2022-01-21 02:10:00', 3, 1, 2);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 15, '2022-02-02 02:09:00', '2022-02-02 02:07:00', 2, 2, 3);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 15, '2022-02-02 02:11:30', '2022-02-02 02:10:00', 3, 1, 2);
 
-INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 13, '2022-02-03 02:09:30', '2022-01-22 02:07:30', 3, 4, 2);
-INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 12, '2022-02-04 02:10:00', '2022-01-29 02:11:00', 1, 2, 2);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 13, '2022-02-03 02:09:30', '2022-02-03 02:07:30', 3, 4, 2);
+INSERT INTO clase (id, cuposmax, hora_fin,hora_ini, disciplina_id, salon_id, trainers_id) VALUES (null, 12, '2022-02-04 02:10:00', '2022-02-04 02:11:00', 1, 2, 2);
 
 ---PAGO---
 
