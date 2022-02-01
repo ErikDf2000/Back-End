@@ -34,7 +34,7 @@ public class ClienteService {
 		c=repository.save(cliente);
 
 
-		String user = cliente.getApellido().trim();
+		String user = cliente.getApellido().split(" ")[0];
 		String pass = cliente.getApellido().charAt(0) + cliente.getDni();
 
 
